@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap3",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Bootstrap 3 templates for form.io",
   "main": "lib/index.js",
   "scripts": {
@@ -31,10 +31,10 @@
     "Standards"
   ],
   "devDependencies": {
-    "@types/chai": "^4.2.3",
+    "@types/chai": "^4.2.5",
     "@types/ejs": "^2.6.3",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.11.2",
+    "@types/node": "^12.12.7",
     "@types/sinon": "^7.5.0",
     "chai": "^4.2.0",
     "gulp": "^4.0.2",
@@ -45,10 +45,10 @@
     "nyc": "^14.1.1",
     "pre-commit": "^1.2.2",
     "sinon": "^7.5.0",
-    "ts-node": "^8.4.1",
+    "ts-node": "^8.5.0",
     "ts-sinon": "^1.0.24",
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.4",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
