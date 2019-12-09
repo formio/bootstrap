@@ -104,9 +104,6 @@ declare const _default: {
         table: {
             form: string;
         };
-        warning: {
-            form: string;
-        };
         well: {
             form: string;
         };
