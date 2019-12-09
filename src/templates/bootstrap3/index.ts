@@ -31,7 +31,6 @@ import signature from './signature';
 import survey from './survey';
 import tab from './tab';
 import table from './table';
-import warning from './warning';
 import well from './well';
 import wizard from './wizard';
 import wizardHeader from './wizardHeader';
@@ -113,7 +112,6 @@ export default {
   survey,
   tab,
   table,
-  warning,
   well,
   wizard,
   wizardHeader,
