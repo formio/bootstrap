@@ -10,9 +10,9 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col {% if (ctx.preview) { %}col-sm-6{% } else { %}col-sm-12{% } %}">
-    <div ref="editForm">
+<div class="row component-edit-content">
+  <div class="col component-edit-tabs {% if (ctx.preview) { %}col-sm-6{% } else { %}col-sm-12{% } %}">
+    <div class="editForm" ref="editForm">
         {{ctx.editForm}}
     </div>
     {% if (!ctx.preview) { %}
