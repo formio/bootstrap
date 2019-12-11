@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap3",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Bootstrap 3 templates for form.io",
   "main": "lib/index.js",
   "scripts": {
@@ -31,10 +31,10 @@
     "Standards"
   ],
   "devDependencies": {
-    "@types/chai": "^4.2.6",
+    "@types/chai": "^4.2.7",
     "@types/ejs": "^3.0.0",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.12.14",
+    "@types/node": "^12.12.17",
     "@types/sinon": "^7.5.1",
     "chai": "^4.2.0",
     "gulp": "^4.0.2",
