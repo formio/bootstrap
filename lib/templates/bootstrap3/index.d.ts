@@ -49,6 +49,7 @@ declare const _default: {
     };
     field: {
         form: string;
+        align: string;
     };
     file: {
         form: string;
