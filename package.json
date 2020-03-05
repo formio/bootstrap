@@ -53,7 +53,7 @@
     "webpack-cli": "^3.3.11"
   },
   "author": "Randall Knutson <randall@form.io>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/formio/bootstrap3/issues"
   },
