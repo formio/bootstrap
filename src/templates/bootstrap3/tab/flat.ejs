@@ -3,7 +3,7 @@
     <div class="panel-heading">
       <h4 class="panel-title">{{ ctx.t(tab.label) }}</h4>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" ref="{{ctx.tabKey}}">
       {{ ctx.tabComponents[index] }}
     </div>
   </div>
