@@ -4,9 +4,12 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## 2.4.1
+## 2.6.0
 ### Fixed
  - Add ref to tabs to fix flattened view.
+
+## 2.5.0
+### ???
 
 ## 2.4.0
 ### Fixed
