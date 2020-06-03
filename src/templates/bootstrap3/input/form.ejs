@@ -4,12 +4,17 @@
 {% if (ctx.component.prefix) { %}
 <div class="input-group-addon" ref="prefix">{{ctx.component.prefix}}</div>
 {% } %}
+{% if (!ctx.component.editor && !ctx.component.wysiwyg) { %}
 <{{ctx.input.type}}
   ref="{{ctx.input.ref ? ctx.input.ref : 'input'}}"
   {% for (var attr in ctx.input.attr) { %}
   {{attr}}="{{ctx.input.attr[attr]}}"
   {% } %}
 >{{ctx.input.content}}</{{ctx.input.type}}>
+{% } %}
+{% if (ctx.component.editor || ctx.component.wysiwyg) { %}
+<div ref="input"></div>
+{% } %}
 {% if (ctx.component.showCharCount) { %}
 <span class="text-muted pull-right" ref="charcount"></span>
 {% } %}
