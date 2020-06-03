@@ -1,5 +1,5 @@
 declare const _default: {
-    form: string;
     align: string;
+    form: string;
 };
 export default _default;

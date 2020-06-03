@@ -49,8 +49,8 @@ declare const _default: {
             html: string;
         };
         field: {
-            form: string;
             align: string;
+            form: string;
         };
         file: {
             form: string;
