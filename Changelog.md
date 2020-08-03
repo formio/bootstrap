@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.6.5
+### Changed
+ - Upgrade dependencies.
+
 ## 2.6.4
 ### Changed
  - FJS-1050: added hide label option for panel
