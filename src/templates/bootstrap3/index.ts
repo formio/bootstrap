@@ -35,6 +35,8 @@ import well from './well';
 import wizard from './wizard';
 import wizardHeader from './wizardHeader';
 import wizardNav from './wizardNav';
+import alert from './alert';
+import errorsList from './errorsList';
 
 export default {
   transform(type, text) {
@@ -116,4 +118,6 @@ export default {
   wizard,
   wizardHeader,
   wizardNav,
+  errorsList,
+  alert
 };
