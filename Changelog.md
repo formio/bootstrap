@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.7.0
+### Fixed
+ - UIP-251: Update file template with file drop area hide option
+
+### Added
+ - FMG-99: Add col-md classes to table and dataGrid templates
+ - FJS-1342: added templates for form errors list and alerts
+ - FJS-1419: added tooltip for wizard pages
+
 ## 2.6.8
 ### Fixed 
  - builderSidebar (template): fix panels not collapsed when switching between groups
