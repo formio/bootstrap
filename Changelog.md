@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - FJS-1342: added templates for form errors list and alerts
  - FJS-1419: added tooltip for wizard pages
 
+### Changed
+ - Upgrade @types/chai@4.2.14, @types/ejs@3.0.5, @types/sinon@9.0.10, sinon@9.2.3, @types/mocha@8.2.0, @types/node@14.14.20, mocha@8.2.1, ts-node@9.1.1, typescript@4.1.3, webpack@5.12.0, webpack-cli@4.3.1
+
 ## 2.6.8
 ### Fixed 
  - builderSidebar (template): fix panels not collapsed when switching between groups

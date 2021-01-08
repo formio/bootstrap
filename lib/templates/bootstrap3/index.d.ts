@@ -117,5 +117,11 @@ declare const _default: {
     wizardNav: {
         form: string;
     };
+    errorsList: {
+        form: string;
+    };
+    alert: {
+        form: string;
+    };
 };
 export default _default;
