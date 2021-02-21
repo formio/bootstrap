@@ -11,5 +11,5 @@
   {{ ctx.labelMarkup }}
 {% } %}
 {% if (ctx.component.description) { %}
-  <div class="help-block">{{ctx.t(ctx.component.description)}}</div>
+  <div class="help-block">{{ctx.t(ctx.component.description, { _userInput: true })}}</div>
 {% } %}
