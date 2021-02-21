@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - FIO-1125: Any value used in Translate list is returning contains an invalid selection
  - FJS-1328: Fixes an issue where it is impossible to reorder rows of a child DataGrid
 
+## 2.8.0
+??????
+
 ## 2.7.0
 ### Fixed
  - UIP-251: Update file template with file drop area hide option
