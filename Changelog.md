@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.8.0
+### Fixed
+ - FIO-1336: File component not showing Take picture or Switch to file upload buttons
+ - Fixed tooltips from not appearing in certain places.
+ - FIO-1125: Any value used in Translate list is returning contains an invalid selection
+ - FJS-1328: Fixes an issue where it is impossible to reorder rows of a child DataGrid
+
 ## 2.7.0
 ### Fixed
  - UIP-251: Update file template with file drop area hide option
