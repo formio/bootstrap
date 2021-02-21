@@ -9,7 +9,7 @@
       {% columns.forEach(function(col) { %}
         <th class="{{col.validate && col.validate.required ? 'field-required' : ''}}">
           {{ col.hideLabel ? '' : t(col.label || col.title) }}
-          {% if (col.tooltip) { %} <i ref="tooltip" data-title="{{col.tooltip}}" class="{{iconClass('question-sign')}} text-muted"></i>{% } %}
+          {% if (col.tooltip) { %} <i ref="tooltip" data-title="{{col.tooltip}}" class="{{iconClass('question-sign')}} text-muted" data-tooltip="{{col.tooltip}}"></i>{% } %}
         </th>
       {% }) %}
     </tr>
