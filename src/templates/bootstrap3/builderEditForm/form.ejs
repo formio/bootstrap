@@ -2,18 +2,20 @@
   <div class="col col-sm-6">
     <p class="lead">{{ctx.t(ctx.componentInfo.title, { _userInput: true })}} {{ctx.t('Component')}}</p>
   </div>
+  {% if (ctx.helplinks) { %}
   <div class="col col-sm-6">
     <div class="pull-right" style="margin-right: 20px; margin-top: 10px">
-      <a href="{{ctx.componentInfo.documentation}}" target="_blank">
+      <a href="{{ctx.t(ctx.helplinks + ctx.componentInfo.documentation)}}" target="_blank">
         <i class="{{ctx.iconClass('new-window')}}"> {{ctx.t('Help')}}</i>
       </a>
     </div>
   </div>
+{% } %}
 </div>
 <div class="row component-edit-content">
   <div class="col component-edit-tabs {% if (ctx.preview) { %}col-sm-6{% } else { %}col-sm-12{% } %}">
     <div class="editForm" ref="editForm">
-        {{ctx.editForm}}
+      {{ctx.editForm}}
     </div>
     {% if (!ctx.preview) { %}
     <div style="margin-top: 10px;">
