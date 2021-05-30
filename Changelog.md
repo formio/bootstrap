@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.12.0-rc.1
+### Changed
+ - FIO-1239: Implement wizard header type selection
+ - FIO-290 | FJS-1367: Feat: add an ability to specify Survey questions' and values' tooltips
+ - FIO-1112: Add vertical layout classes for tabs component
+ - FIO-175: Adds ability to use different masks for Value and for View
+
 ## 2.11.0
 ### Fixed
  - FIO-1383: Fixes an error occurring in IE11 when switch Wizard page in Form Builder

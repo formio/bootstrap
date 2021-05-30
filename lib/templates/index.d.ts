@@ -115,6 +115,12 @@ declare const _default: {
         wizardHeader: {
             form: string;
         };
+        wizardHeaderClassic: {
+            form: string;
+        };
+        wizardHeaderVertical: {
+            form: string;
+        };
         wizardNav: {
             form: string;
         };

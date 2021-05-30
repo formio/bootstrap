@@ -9,6 +9,7 @@
         "one-line": [false, "check-catch", "check-finally", "check-else"],
         "object-literal-sort-keys": false,
         "no-shadowed-variable": false,
+        "no-var-requires": false,
         "variable-name": {
             "options": [
                 "allow-leading-underscore",

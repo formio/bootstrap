@@ -1,4 +1,4 @@
-import ResizeObserver from 'resize-observer-polyfill';
+const ResizeObserverPolyfill = require('resize-observer-polyfill');
 
 import builder from './builder';
 import builderComponent from './builderComponent';
@@ -55,7 +55,7 @@ export default {
     if (builder.scrollResizeObserver) {
       builder.scrollResizeObserver.disconnect();
     }
-    builder.scrollResizeObserver = new ResizeObserver(() => {
+    builder.scrollResizeObserver = new ResizeObserverPolyfill(() => {
       setTimeout(() => {
         const { form, sidebar } = builder.refs;
         const formHeight = form && form.parentNode && form.parentNode.clientHeight;
