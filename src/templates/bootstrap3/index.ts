@@ -55,21 +55,14 @@ export default {
     }
     builder.scrollResizeObserver = new ResizeObserver(() => {
       setTimeout(() => {
-        const {
-          form: {
-            parentNode: {
-              clientHeight: formHeight,
-            },
-          },
-          sidebar: {
-            clientHeight: sidebarHeight,
-            parentNode: {
-              style,
-            },
-          },
-        } = builder.refs;
+        const { form, sidebar } = builder.refs;
+        const formHeight = form && form.parentNode && form.parentNode.clientHeight;
+        const sidebarHeight = sidebar && sidebar.clientHeight;
+        const style = sidebar && sidebar.parentNode && sidebar.parentNode.style;
 
-        style.height = `${Math.max(sidebarHeight + 20, formHeight)}px`;
+        if (style && formHeight && sidebarHeight) {
+          style.height = `${Math.max(sidebarHeight + 20, formHeight)}px`;
+        }
       });
     });
 

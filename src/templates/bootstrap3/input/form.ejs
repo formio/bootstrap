@@ -27,12 +27,6 @@
 {% if (ctx.component.editor || ctx.component.wysiwyg) { %}
   <div ref="input"></div>
 {% } %}
-{% if (ctx.component.showCharCount) { %}
-  <span class="text-muted pull-right" ref="charcount"></span>
-{% } %}
-{% if (ctx.component.showWordCount) { %}
-  <span class="text-muted pull-right" ref="wordcount"></span>
-{% } %}
 {% if (ctx.suffix) { %}
   <div class="input-group-addon" ref="suffix">
     {% if(ctx.suffix instanceof HTMLElement){ %}
@@ -44,4 +38,10 @@
 {% } %}
 {% if (ctx.prefix || ctx.suffix) { %}
   </div>
+{% } %}
+{% if (ctx.component.showCharCount) { %}
+<span class="text-muted pull-right" ref="charcount"></span>
+{% } %}
+{% if (ctx.component.showWordCount) { %}
+<span class="text-muted pull-right" ref="wordcount"></span>
 {% } %}

@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.11.0
+### Fixed
+ - FIO-1383: Fixes an error occurring in IE11 when switch Wizard page in Form Builder
+ - FIO-2565: Fixes an issue where tooltip for the first Wizard page is not shown on initial load
+
 ## 2.10.0
 ### Fixed
  - FIO-2463: fixed an issue where dataGrid renders incorrectly when reorder is enabled
