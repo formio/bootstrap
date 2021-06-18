@@ -1,4 +1,5 @@
-import ResizeObserver from 'resize-observer-polyfill';
+// tslint:disable-next-line:no-var-requires
+const ResizeObserver = require('resize-observer-polyfill');
 
 import builder from './builder';
 import builderComponent from './builderComponent';

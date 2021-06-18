@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.11.1
+### Fixed
+ - FIO-3323: Fixing the datagrid spacing.
+
 ## 2.11.0
 ### Fixed
  - FIO-1383: Fixes an error occurring in IE11 when switch Wizard page in Form Builder
