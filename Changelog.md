@@ -15,6 +15,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - FIO-1112: Add vertical layout classes for tabs component
  - FIO-175: Adds ability to use different masks for Value and for View
 
+## 2.11.2
+### Fixed
+ - FIO-3323: Removing the "col" classes from tables since they are causing issues.
+
+## 2.11.1
+### Fixed
+ - FIO-3323: Fixing the datagrid spacing.
+
 ## 2.11.0
 ### Fixed
  - FIO-1383: Fixes an error occurring in IE11 when switch Wizard page in Form Builder
@@ -47,7 +55,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - Upgrade @types/chai@4.2.14, @types/ejs@3.0.5, @types/sinon@9.0.10, sinon@9.2.3, @types/mocha@8.2.0, @types/node@14.14.20, mocha@8.2.1, ts-node@9.1.1, typescript@4.1.3, webpack@5.12.0, webpack-cli@4.3.1
 
 ## 2.6.8
-### Fixed 
+### Fixed
  - builderSidebar (template): fix panels not collapsed when switching between groups
 
 ## 2.6.5

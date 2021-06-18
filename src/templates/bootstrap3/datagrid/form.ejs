@@ -42,13 +42,13 @@
         </td>
       {% } %}
       {% ctx.columns.forEach(function(col) { %}
-        <td ref="{{ctx.datagridKey}}" class="col-md-{{col.colWidth}}">
+        <td ref="{{ctx.datagridKey}}">
           {{row[col.key]}}
         </td>
       {% }) %}
       {% if (ctx.hasExtraColumn) { %}
         {% if (ctx.hasRemoveButtons) { %}
-        <td class="col-md-1">
+        <td>
           <button type="button" class="btn btn-default formio-button-remove-row" ref="{{ctx.datagridKey}}-removeRow">
             <i class="{{ctx.iconClass('remove-circle')}}"></i>
           </button>
