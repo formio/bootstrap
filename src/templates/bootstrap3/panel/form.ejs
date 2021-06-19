@@ -1,6 +1,14 @@
 <div class="panel panel-{{ctx.component.theme}}">
   {% if (!ctx.component.hideLabel || ctx.builder || ctx.component.collapsible || ctx.component.tooltip) { %}
-  <div class="panel-heading" ref="header">
+  <div class="panel-heading"
+    {% if (ctx.component.collapsible) { %}
+    tabindex="0"
+    {% } %}
+    role="button"
+    aria-expanded="{{ctx.component.collapsible ? !ctx.collapsed : true}}"
+    aria-controls="{{ctx.instance.id}}-{{ctx.component.key}}"
+    ref="header"
+  >
     <h4 class="mb-0 panel-title">
       {% if (ctx.component.collapsible) { %}
         <i class="formio-collapse-icon {{ctx.iconClass(ctx.collapsed ? 'plus' : 'minus')}} text-muted" data-title="Collapse Panel"></i>
@@ -15,7 +23,7 @@
   </div>
   {% } %}
   {% if (!ctx.collapsed || ctx.builder) { %}
-  <div class="panel-body" ref="{{ctx.nestedKey}}">
+  <div class="panel-body" ref="{{ctx.nestedKey}}" id="{{ctx.instance.id}}-{{ctx.component.key}}">
     {{ctx.children}}
   </div>
   {% } %}
