@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.12.0-rc.3
+### Fixed
+ - Template import issues.
+
 ## 2.12.0-rc.2
 ### Fixed
  - FIO-3323: Fixing the datagrid spacing.
