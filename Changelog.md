@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - FIO-1112: Add vertical layout classes for tabs component
  - FIO-175: Adds ability to use different masks for Value and for View
 
+## 2.11.3
+### Fixed
+ - Importing the resize polyfill correctly with correct typescript version.
+
 ## 2.11.2
 ### Fixed
  - FIO-3323: Removing the "col" classes from tables since they are causing issues.

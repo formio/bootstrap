@@ -1,5 +1,5 @@
-const ResizeObserverPolyfill = require('resize-observer-polyfill');
-
+// tslint:disable-next-line:no-var-requires
+import ResizeObserver from 'resize-observer-polyfill';
 import builder from './builder';
 import builderComponent from './builderComponent';
 import builderComponents from './builderComponents';
@@ -55,7 +55,7 @@ export default {
     if (builder.scrollResizeObserver) {
       builder.scrollResizeObserver.disconnect();
     }
-    builder.scrollResizeObserver = new ResizeObserverPolyfill(() => {
+    builder.scrollResizeObserver = new ResizeObserver(() => {
       setTimeout(() => {
         const { form, sidebar } = builder.refs;
         const formHeight = form && form.parentNode && form.parentNode.clientHeight;
