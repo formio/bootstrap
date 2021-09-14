@@ -1,4 +1,4 @@
-const ResizeObserverPolyfill = require('resize-observer-polyfill');
+import ResizeObserverPolyfill from 'resize-observer-polyfill';
 
 import builder from './builder';
 import builderComponent from './builderComponent';
