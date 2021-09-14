@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.12.0-rc.5
+### Fixed
+ - FIO-3909 & FIO-3910: Fix FormBuilder polyfill import
+
 ## 2.12.0-rc.4
 ### Fixed
  - FIO-3519 Added ref to wizard header for 'scroll to top' feature
