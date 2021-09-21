@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.11.5-rc.1
+### Fixed
+ - FIO-3758: Duplication of radio ids inside nested forms
+
 ## 2.11.4
 ### Changed
  - No changes. Official Release
