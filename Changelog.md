@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased: 2.12.1-rc.1]
+### Fixed
+ - FIO-4567: Update Signature component template to match bootstrap templates
+
 ## 2.12.0
 ### Changed
  - Official Release
