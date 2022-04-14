@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.12.2
+### Changed
+ - Official Release
+
 ## 2.12.2-rc.1
 ### Fixed
  - FIO-3924: Fixes an issue where the DataGrid has an additional column wwhen "Equal columns width" is checked
