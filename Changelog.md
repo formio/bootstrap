@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
  - Increment minor version.
 
+### Fixed
+ - FIO-4343: Fixes datagrid remove row column using much space
+
 ## 2.12.2
 ### Changed
  - Official Release
