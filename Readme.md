@@ -1,15 +1,22 @@
-# Form.io Bootstrap 3 Templates
+# Form.io Bootstrap Templates
 
-This repository will change the rendering of forms in formio.js so that it uses html and classes compatible with the [Bootstrap 3](https://getbootstrap.com/docs/3.3/) framework. 
+This repository will change the rendering of forms in formio.js so that it uses html and classes compatible with [Bootstrap 3](https://getbootstrap.com/docs/3.4/) and [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) framework. 
 
-## Usage
+### Using Bootstrap 3
 
 ```javascript
-import bootstrap3 from '@formio/bootstrap3';
+import bootstrap3 from '@formio/bootstrap/bootstrap3';
 import { Formio } from 'formiojs';
-
 Formio.use(bootstrap3);
 ```
+### Using Bootstrap 4
+
+```javascript
+import bootstrap4 from '@formio/bootstrap/bootstrap4';
+import { Formio } from 'formiojs';
+Formio.use(bootstrap4);
+```
+
 ## Script
 
 

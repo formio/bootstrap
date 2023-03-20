@@ -2,7 +2,7 @@
   "name": "@formio/bootstrap",
   "version": "3.0.0-rc.1",
   "description": "Bootstrap templates for Form.io forms",
-  "main": "lib/index.js",
+  "main": "lib/bootstrap4.js",
   "scripts": {
     "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
     "test": "mocha --require ts-node/register --reporter spec './{,!(node_modules)/**/}*.spec.ts'",
