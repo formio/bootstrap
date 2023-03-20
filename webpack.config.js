@@ -1,12 +1,15 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.join(path.resolve(__dirname, 'lib'), 'index.js'),
+  entry: {
+    'bootstrap3': './lib/bootstrap3.js',
+    'bootstrap4': './lib/bootstrap4.js',
+  },
   output: {
-    library: 'bootstrap3',
+    library: '[name]',
     libraryTarget: 'umd',
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bootstrap3.js',
+    filename: '[name].js',
   },
   mode: 'production',
   performance: { hints: false },

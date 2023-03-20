@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "preserveConstEnums": true,
     "outDir": "lib",
     "noImplicitAny": false,
     "sourceMap": false,
     "declaration": true,
+    "skipLibCheck": true,
     "rootDir": "src"
   },
   "include": [
