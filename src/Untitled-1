@@ -1,1 +1,0 @@
-find ./src/ -depth -name "*.js" -exec sh -c 'mv "$1" "${1%.js}.ts"' _ {} \;
