@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     'bootstrap3': './lib/bootstrap3.js',
     'bootstrap4': './lib/bootstrap4.js',
+    'bootstrap5': './lib/bootstrap5.js',
   },
   output: {
     library: '[name]',
