@@ -20,7 +20,7 @@ Formio.use(bootstrap4);
 ### Using Bootstrap 5
 
 ```javascript
-import bootstrap4 from '@formio/bootstrap/bootstrap5';
+import bootstrap5 from '@formio/bootstrap/bootstrap5';
 import { Formio } from 'formiojs';
 Formio.use(bootstrap5);
 ```
