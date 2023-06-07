@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "moduleResolution": "node",
     "preserveConstEnums": true,
-    "outDir": "lib",
     "noImplicitAny": false,
     "sourceMap": false,
     "declaration": true,
@@ -18,6 +16,7 @@
   ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "gulpfile.js",
   ]
 }

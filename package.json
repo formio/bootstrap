@@ -2,12 +2,31 @@
   "name": "@formio/bootstrap",
   "version": "3.0.0-rc.2",
   "description": "Bootstrap templates for Form.io forms",
-  "main": "lib/bootstrap4.js",
+  "main": "lib/cjs/bootstrap5.js",
+  "module": "lib/mjs/bootstrap5.js",
+  "exports": {
+    "./components": {
+      "import": "./lib/mjs/teplates/components/index.js",
+      "require": "./lib/cjs/teplates/components/index.js"
+    },
+    "./bootstrap3": {
+      "import": "./lib/mjs/bootstrap3.js",
+      "require": "./lib/cjs/bootstrap3.js"
+    },
+    "./bootstrap4": {
+      "import": "./lib/mjs/bootstrap4.js",
+      "require": "./lib/cjs/bootstrap4.js"
+    },
+    "./bootstrap5": {
+      "import": "./lib/mjs/bootstrap5.js",
+      "require": "./lib/cjs/bootstrap5.js"
+    }
+  },
   "scripts": {
     "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
     "test": "mocha --require ts-node/register --reporter spec './{,!(node_modules)/**/}*.spec.ts'",
     "watch": "tsc -w",
-    "build": "tsc && gulp templates && webpack",
+    "build": "rm -rf ./lib && tsc --project tsconfig.cjs.json && tsc --project tsconfig.mjs.json && gulp templates && webpack && node ./libpackage.js",
     "lint": "tslint -p .",
     "prepublish": "npm run build"
   },

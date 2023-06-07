@@ -20,5 +20,6 @@ gulp.task('templates', () =>
     .pipe(rename({
       extname: '.ejs.js'
     }))
-    .pipe(gulp.dest('lib'))
+    .pipe(gulp.dest('lib/mjs'))
+    .pipe(gulp.dest('lib/cjs'))
 );
