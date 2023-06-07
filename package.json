@@ -6,8 +6,8 @@
   "module": "lib/mjs/bootstrap5.js",
   "exports": {
     "./components": {
-      "import": "./lib/mjs/teplates/components/index.js",
-      "require": "./lib/cjs/teplates/components/index.js"
+      "import": "./lib/mjs/templates/components/index.js",
+      "require": "./lib/cjs/templates/components/index.js"
     },
     "./bootstrap3": {
       "import": "./lib/mjs/bootstrap3.js",
