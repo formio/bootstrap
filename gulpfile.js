@@ -13,7 +13,10 @@ gulp.task('templates-cjs', () =>
       escape: /\{\{\{([\s\S]+?)\}\}\}/g,
       variable: 'ctx'
     }))
-    .pipe(insert.prepend('module.exports='))
+    .pipe(insert.prepend('Object.defineProperty(exports, "__esModule", {\n' +
+    '  value: true\n' +
+    '});\n' +
+    'exports.default='))
     .pipe(rename({
       extname: '.ejs.js'
     }))
