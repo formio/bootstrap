@@ -1,7 +1,2 @@
-declare const _default: {
-    editgrid: {
-        row: string;
-        header: string;
-    };
-};
-export default _default;
+import editgrid from './editgrid';
+export { editgrid };
