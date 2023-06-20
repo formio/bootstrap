@@ -5,6 +5,10 @@
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
   "exports": {
+    ".": {
+      "import": "./lib/mjs/bootstrap5.js",
+      "require": "./lib/cjs/bootstrap5.js"
+    },
     "./components": {
       "import": "./lib/mjs/templates/components/index.js",
       "require": "./lib/cjs/templates/components/index.js"
