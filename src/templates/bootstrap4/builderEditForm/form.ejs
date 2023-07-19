@@ -13,19 +13,22 @@
   {% } %}
 </div>
 <div class="row">
-  <div class="col component-edit-tabs {% if (ctx.preview) { %}col-sm-6{% } else { %}col-sm-12{% } %}">
+  <div class="col component-edit-tabs {{ (ctx.preview && ctx.showPreview) ? 'col-sm-6' : 'col-sm-12' }}">
     <div ref="editForm">
         {{ctx.editForm}}
     </div>
-    {% if (!ctx.preview) { %}
+    {% if (!ctx.showPreview) { %}
     <div style="margin-top: 10px;">
       <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('Save')}}</button>
       <button class="btn btn-secondary" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
       <button class="btn btn-danger" ref="removeButton">{{ctx.t('Remove')}}</button>
+      {% if (ctx.preview) { %}
+      <button class="btn btn-primary float-right" ref="previewButton">{{ctx.t('Show preview')}}</button>
+      {% } %}
     </div>
     {% } %}
   </div>
-  {% if (ctx.preview) { %}
+  {% if (ctx.showPreview && ctx.preview) { %}
   <div class="col col-sm-6">
     <div class="card panel preview-panel">
       <div class="card-header">
@@ -46,6 +49,7 @@
       <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('Save')}}</button>
       <button class="btn btn-secondary" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
       <button class="btn btn-danger" ref="removeButton">{{ctx.t('Remove')}}</button>
+      <button class="btn btn-primary float-right" ref="previewButton">{{ctx.t('Hide preview')}}</button>
     </div>
   </div>
   {% } %}
