@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [UNRELEASED: 3.0.0-rc.5]
+## [Unreleased: 3.0.0-rc.5]
 ### Fixed
  - FIO-5748: changed templates to support collapsible preview in component settings
 
