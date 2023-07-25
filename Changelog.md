@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [UNRELEASED: 3.0.0-rc.5]
+### Fixed
+ - FIO-5748: changed templates to support collapsible preview in component settings
+
 ## 3.0.0-rc.4
 ### Fixed
  - Fixed mjs and cjs template definitions.
