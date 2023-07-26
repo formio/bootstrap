@@ -67,24 +67,36 @@
 {% if (!ctx.disabled && (ctx.component.multiple || !ctx.files.length)) { %}
   {% if (ctx.self.useWebViewCamera) { %}
     <div class="fileSelector">
-      <button class="btn btn-primary" ref="galleryButton"><i class="bi bi-book"></i> {{ctx.t('Gallery')}}</button>
-      <button class="btn btn-primary" ref="cameraButton"><i class="bi bi-camera"></i> {{ctx.t('Camera')}}</button>
+      <button class="btn btn-primary" ref="galleryButton"><i class="{{ctx.iconClass('book')}}"></i> {{ctx.t('Gallery')}}</button>
+      <button class="btn btn-primary" ref="cameraButton"><i class="{{ctx.iconClass('camera')}}"></i> {{ctx.t('Camera')}}</button>
     </div>
   {% } else if (!ctx.self.cameraMode) { %}
     <div class="fileSelector" ref="fileDrop" {{ctx.fileDropHidden ?'hidden' : ''}}>
-      <i class="{{ctx.iconClass('cloud-upload')}}"></i> {{ctx.t('Drop files to attach,')}}
-        {% if (ctx.self.imageUpload && ctx.component.webcam) { %}
-          <a href="#" ref="toggleCameraMode"><i class="bi bi-camera"></i> {{ctx.t('use camera')}}</a>
-        {% } %}
+      {% if (!ctx.self.isMobile.any) { %}
+        <i class="{{ctx.iconClass('cloud-upload')}}"></i> {{ctx.t('Drop files to attach,')}}
+      {% } %}
+      {% if (ctx.self.imageUpload && ctx.component.webcam) { %}
+        <a href="#" ref="toggleCameraMode"><i class="{{ctx.iconClass('camera')}}"></i>{{ctx.t('Use Camera')}}</a>
         {{ctx.t('or')}}
-        <a href="#" ref="fileBrowse" class="browse">
-          {{ctx.t('browse')}}
-          <span class="visually-hidden">
-            {{ctx.t('Browse to attach file for ' + ctx.component.label + '. ' + 
-            (ctx.component.description ? ctx.component.description + '. ' : '') + 
-            ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern))}}
-          </span>
-        </a>
+      {% } %}
+      <a href="#" ref="fileBrowse" class="browse">
+        {% if (ctx.self.isMobile.any && ctx.component.capture) { %}
+          {% if (ctx.component.filePattern && ctx.component.filePattern.includes("video")) { %}
+            <i class="{{ctx.iconClass('video')}}"></i>{{ctx.t('Capture Video')}}
+          {% } else if (ctx.component.filePattern && ctx.component.filePattern.includes("audio")) { %}
+            <i class="{{ctx.iconClass('microphone')}}"></i>{{ctx.t('Capture Audio')}}
+          {% } else { %}
+            <i class="{{ctx.iconClass('camera')}}"></i>{{ctx.t('Capture Image')}}
+          {% } %}    
+        {% } else { %}
+          <i class="{{ctx.iconClass('folder-open')}}"></i>{{ctx.t('Browse Files')}}
+        {% } %}
+        <span class="visually-hidden">
+          {{ctx.t('Browse to attach file for ' + ctx.component.label + '. ' + 
+          (ctx.component.description ? ctx.component.description + '. ' : '') + 
+          ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern))}}
+        </span>
+      </a>
       <div ref="fileProcessingLoader" class="loader-wrapper">
         <div class="loader text-center"></div>
       </div>
@@ -93,7 +105,7 @@
     <div class="video-container">
       <video class="video" autoplay="true" ref="videoPlayer" tabindex="-1"></video>
     </div>
-    <button class="btn btn-primary" ref="takePictureButton"><i class="bi bi-camera"></i> {{ctx.t('Take Picture')}}</button>
+    <button class="btn btn-primary" ref="takePictureButton"><i class="{{ctx.iconClass('camera')}}"></i> {{ctx.t('Take Picture')}}</button>
     <button class="btn btn-primary" ref="toggleCameraMode">{{ctx.t('Switch to file upload')}}</button>
   {% } %}
 {% } %}
