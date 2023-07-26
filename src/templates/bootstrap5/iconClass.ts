@@ -109,6 +109,9 @@ export default (iconset, name, spinning) => {
         case 'move':
             biName = 'arrows-move';
             break;
+        case 'edit':
+            biName = 'pencil';
+            break;
         case 'time':
             biName = 'clock';
             break;
