@@ -8,10 +8,10 @@
     aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}
 >
-  {% ctx.values.forEach(function(item) { %}
+  {% ctx.values.forEach(function(item, index) { %}
   <div class="{{ctx.input.attr.type}} {{ ctx.component.optionsLabelPosition && ctx.component.optionsLabelPosition !== 'right' ? 'ps-0' : ''}} form-check{{ctx.inline ? '-inline' : ''}}" ref="wrapper">
     {% if (['left', 'top'].includes(ctx.component.optionsLabelPosition)) { %}
-    <label class="form-check-label label-position-{{ ctx.component.optionsLabelPosition }}" for="{{ctx.instance.root && ctx.instance.root.id}}-{{ctx.id}}-{{ctx.row}}-{{item.value}}"><span>{{ctx.t(item.label, { _userInput: true })}}</span></label>
+    <label class="form-check-label label-position-{{ ctx.component.optionsLabelPosition }}" for="{{ctx.instance.root && ctx.instance.root.id}}-{{ctx.id}}-{{ctx.row}}-{{(typeof item.value === 'object') ? item.value + '-' + index : item.value}}"><span>{{ctx.t(item.label, { _userInput: true })}}</span></label>
     {% } %}
     <{{ctx.input.type}}
         ref="input"
@@ -25,11 +25,11 @@
         {% if (item.disabled) { %}
           disabled=true
         {% } %}
-        id="{{ctx.instance.root && ctx.instance.root.id}}-{{ctx.id}}-{{ctx.row}}-{{item.value}}"
+        id="{{ctx.instance.root && ctx.instance.root.id}}-{{ctx.id}}-{{ctx.row}}-{{(typeof item.value === 'object') ? item.value + '-' + index : item.value}}"
         role="{{ctx.component.type === 'selectboxes' ? 'checkbox' : 'radio'}}"
       >
     {% if (!ctx.component.optionsLabelPosition || ['right', 'bottom'].includes(ctx.component.optionsLabelPosition)) { %}
-    <label class="form-check-label label-position-{{ ctx.component.optionsLabelPosition }}" for="{{ctx.instance.root && ctx.instance.root.id}}-{{ctx.id}}-{{ctx.row}}-{{item.value}}"><span>{{ctx.t(item.label, { _userInput: true })}}</span></label>
+    <label class="form-check-label label-position-{{ ctx.component.optionsLabelPosition }}" for="{{ctx.instance.root && ctx.instance.root.id}}-{{ctx.id}}-{{ctx.row}}-{{(typeof item.value === 'object') ? item.value + '-' + index : item.value}}"><span>{{ctx.t(item.label, { _userInput: true })}}</span></label>
     {% } %}
   </div>
   {% }) %}
