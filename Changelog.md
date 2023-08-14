@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased: 3.0.0-rc.5]
 ### Fixed
  - FIO-5748: changed templates to support collapsible preview in component settings
+ - FIO-7209: Radio works without ValueProperty set 
 
 ## 3.0.0-rc.4
 ### Fixed
