@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap",
-  "version": "3.0.0-rc.12",
+  "version": "3.0.0-rc.13",
   "description": "Bootstrap templates for Form.io forms",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
@@ -70,8 +70,8 @@
     "@types/chai": "^4.2.22",
     "@types/ejs": "^3.1.0",
     "@types/mocha": "^10.0.1",
-    "@types/node": "^20.4.5",
-    "@types/sinon": "^10.0.4",
+    "@types/node": "^20.5.0",
+    "@types/sinon": "^10.0.16",
     "chai": "^4.3.4",
     "copy-props": "^4.0.0",
     "gulp": "^4.0.2",
@@ -94,7 +94,5 @@
     "url": "https://github.com/formio/bootstrap3/issues"
   },
   "homepage": "https://github.com/formio/bootstrap3#readme",
-  "dependencies": {
-    "resize-observer-polyfill": "^1.5.1"
-  }
+  "dependencies": {}
 }
