@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased: 3.0.0-rc.5]
 ### Fixed
  - FIO-5748: changed templates to support collapsible preview in component settings
- - FIO-7209: Radio works without ValueProperty set 
+ - FIO-7209: Radio works without ValueProperty set
+ - FIO-7197: Increased builder dropzone in DataGrid
 
 ## 3.0.0-rc.4
 ### Fixed
