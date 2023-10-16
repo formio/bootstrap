@@ -1,28 +1,28 @@
 {
   "name": "@formio/bootstrap",
-  "version": "3.0.0-rc.14",
+  "version": "3.0.0-rc.15",
   "description": "Bootstrap templates for Form.io forms",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
   "exports": {
     ".": {
-      "import": "./lib/mjs/bootstrap5.js",
+      "import": "./lib/cjs/bootstrap5.js",
       "require": "./lib/cjs/bootstrap5.js"
     },
     "./components": {
-      "import": "./lib/mjs/templates/components/index.js",
+      "import": "./lib/cjs/templates/components/index.js",
       "require": "./lib/cjs/templates/components/index.js"
     },
     "./bootstrap3": {
-      "import": "./lib/mjs/bootstrap3.js",
+      "import": "./lib/cjs/bootstrap3.js",
       "require": "./lib/cjs/bootstrap3.js"
     },
     "./bootstrap4": {
-      "import": "./lib/mjs/bootstrap4.js",
+      "import": "./lib/cjs/bootstrap4.js",
       "require": "./lib/cjs/bootstrap4.js"
     },
     "./bootstrap5": {
-      "import": "./lib/mjs/bootstrap5.js",
+      "import": "./lib/cjs/bootstrap5.js",
       "require": "./lib/cjs/bootstrap5.js"
     }
   },
