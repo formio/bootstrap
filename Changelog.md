@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - FIO-5748: changed templates to support collapsible preview in component settings
  - FIO-7209: Radio works without ValueProperty set
  - FIO-7197: Increased builder dropzone in DataGrid
+ - FIO-7429: Fix columns component settings (pull, offset, push)
+ - FIO-7365: fixed an issue with Textarea component expanding inside of the DataGrid in Submission view
 
 ## 3.0.0-rc.4
 ### Fixed
