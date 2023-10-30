@@ -2,7 +2,7 @@
     {{ ctx.component.striped ? 'table-striped' : ''}}
     {{ ctx.component.hover ? 'table-hover' : ''}}
     {{ ctx.component.condensed ? 'table-sm' : ''}}
-    " {% if (ctx.component.layoutFixed) { %}style="table-layout: fixed;"{% } %}>
+    " {% if (ctx.component.layoutFixed || ctx.readOnly) { %}style="table-layout: fixed;"{% } %}>
   {% if (ctx.hasHeader) { %}
   <thead>
     <tr>
