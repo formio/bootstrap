@@ -30,7 +30,7 @@ export default (iconset, name, spinning) => {
             break;
         case 'minus-square-o':
             biName = 'dash-square';
-            break;                    
+            break;
         case 'plus-square':
             biName = 'ui-checks';
             break;

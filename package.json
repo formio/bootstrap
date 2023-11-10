@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap",
-  "version": "3.0.0-rc.15",
+  "version": "3.0.0-rc.16",
   "description": "Bootstrap templates for Form.io forms",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
@@ -67,11 +67,11 @@
     "Standards"
   ],
   "devDependencies": {
-    "@types/chai": "^4.3.8",
-    "@types/ejs": "^3.1.3",
-    "@types/mocha": "^10.0.2",
-    "@types/node": "^20.8.5",
-    "@types/sinon": "^10.0.19",
+    "@types/chai": "^4.3.10",
+    "@types/ejs": "^3.1.5",
+    "@types/mocha": "^10.0.4",
+    "@types/node": "^20.9.0",
+    "@types/sinon": "^17.0.1",
     "chai": "^4.3.10",
     "copy-props": "^4.0.0",
     "gulp": "^4.0.2",
@@ -81,7 +81,7 @@
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
     "pre-commit": "^1.2.2",
-    "sinon": "^16.1.0",
+    "sinon": "^17.0.1",
     "ts-node": "^10.2.1",
     "ts-sinon": "^2.0.2",
     "tslint": "^6.1.3",
