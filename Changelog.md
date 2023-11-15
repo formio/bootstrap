@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - FIO-7429: Fix columns component settings (pull, offset, push)
  - FIO-7365: fixed an issue with Textarea component expanding inside of the DataGrid in Submission view
 
+### Changed
+ - added support for file synchronization feature
+
 ## 3.0.0-rc.4
 ### Fixed
  - Fixed mjs and cjs template definitions.
