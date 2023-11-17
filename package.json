@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap",
-  "version": "3.0.0-rc.17",
+  "version": "3.0.0-rc.18",
   "description": "Bootstrap templates for Form.io forms",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
@@ -52,7 +52,8 @@
     "test"
   ],
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
   "repository": {
     "type": "git",
