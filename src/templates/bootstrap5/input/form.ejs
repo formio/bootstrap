@@ -10,6 +10,9 @@
       {% } %}
     </div>
   {% } %}
+  {% if (ctx.options.floatingLabels) { %}
+  <div class="form-floating">
+  {% } %}
   {% if (!ctx.component.editor && !ctx.component.wysiwyg) { %}
     <{{ctx.input.type}}
       ref="{{ctx.input.ref ? ctx.input.ref : 'input'}}"
@@ -21,6 +24,12 @@
       aria-required="{{ctx.input.ref === 'input' || !ctx.input.ref ? ctx.component.validate.required :
         ctx.component.fields && ctx.component.fields[ctx.input.ref] && ctx.component.fields[ctx.input.ref].required || false}}"
     >{{ctx.input.content}}</{{ctx.input.type}}>
+    {% if (ctx.options.floatingLabels) { %}
+    <label ref="label" class="col-form-label {{ctx.label.className}}"
+      for="{{ctx.instance.id}}-{{ctx.component.key}}"
+      id="l-{{ctx.instance.id}}-{{ctx.component.key}}"
+    >{{ ctx.t(ctx.component.label, { _userInput: true }) }}</label>
+    {% } %}
     {% if (ctx.hasValueMaskInput) { %}
       <input ref="valueMaskInput" />
     {% } %}
@@ -40,7 +49,7 @@
     {% } %}
   </div>
 {% } %}
-{% if (ctx.prefix || ctx.suffix) { %}
+{% if (ctx.prefix || ctx.suffix || ctx.options.floatingLabels) { %}
   </div>
 {% } %}
 {% if (ctx.component.showCharCount || ctx.component.showWordCount) { %}
