@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - FIO-7197: Increased builder dropzone in DataGrid
  - FIO-7429: Fix columns component settings (pull, offset, push)
  - FIO-7365: fixed an issue with Textarea component expanding inside of the DataGrid in Submission view
+ - FIO-7773: Add floating labels to Bootstrap 5 template
 
 ### Changed
  - added support for file synchronization feature
