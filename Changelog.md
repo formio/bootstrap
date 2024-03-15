@@ -8,11 +8,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased: 3.0.0-rc.5]
 ### Fixed
  - FIO-5748: changed templates to support collapsible preview in component settings
+ - FIO-7224: Changed alignment for PDF condensed mode
  - FIO-7209: Radio works without ValueProperty set
  - FIO-7197: Increased builder dropzone in DataGrid
  - FIO-7429: Fix columns component settings (pull, offset, push)
  - FIO-7365: fixed an issue with Textarea component expanding inside of the DataGrid in Submission view
+ - FIO-5288-fix-of-search-bar
+ - FIO-3820: added file synchronization feature
  - FIO-7773: Add floating labels to Bootstrap 5 template
+ - Bump es5-ext from 0.10.62 to 0.10.64
+ - Bump @babel/traverse from 7.22.5 to 7.23.2
+ - Bootstrap5: Missing icons for panel collapse/uncollapse
+ - Bump get-func-name from 2.0.0 to 2.0.2
 
 ### Changed
  - added support for file synchronization feature
