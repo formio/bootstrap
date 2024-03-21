@@ -113,6 +113,10 @@ jobs:
         with:
           cmd: prepublish
 
+      - name: Show workspace contents
+        run: |
+          ls -R .
+
       - name: Prepare version for publish
         id: prep
         run: |
