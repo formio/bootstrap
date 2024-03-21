@@ -108,6 +108,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Pre-publish
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: prepublish
+
       - name: Prepare version for publish
         id: prep
         run: |
@@ -132,7 +137,7 @@ jobs:
         run: |
           echo "Version to publish: $NEW_VERSION"
 
-      # - name: Publish to npm
-      #   run: |
-      #     npm version $NEW_VERSION
-      #     npm publish --tag dev
+      - name: Publish to npm
+        run: |
+          npm version $NEW_VERSION
+          npm publish --tag dev
