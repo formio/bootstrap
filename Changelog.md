@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - Bump @babel/traverse from 7.22.5 to 7.23.2
  - Bootstrap5: Missing icons for panel collapse/uncollapse
  - Bump get-func-name from 2.0.0 to 2.0.2
+ - FIO-7933 added PDF Document Designer
 
 ### Changed
  - added support for file synchronization feature
