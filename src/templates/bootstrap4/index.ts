@@ -62,6 +62,11 @@ import wizardNav from './wizardNav';
 import cssClasses from './cssClasses';
 import errorsList from './errorsList';
 import alert from './alert';
+import grid from './grid';
+import pagination from './pagination';
+import columnMenu from './column-menu';
+import tbody from './tbody';
+import paginationBottom from './pagination-bottom';
 
 export default {
   transform(type, text) {
@@ -138,5 +143,10 @@ export default {
   wizardHeaderVertical,
   wizardNav,
   errorsList,
-  alert
+  alert,
+  grid,
+  pagination,
+  columnMenu,
+  tbody,
+  paginationBottom
 };

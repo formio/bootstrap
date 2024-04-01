@@ -132,6 +132,21 @@ declare const _default: {
             alert: {
                 form: string;
             };
+            grid: {
+                html: string;
+            };
+            pagination: {
+                html: string;
+            };
+            columnMenu: {
+                html: string;
+            };
+            tbody: {
+                html: string;
+            };
+            paginationBottom: {
+                html: string;
+            };
         };
     };
 };
