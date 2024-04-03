@@ -181,4 +181,4 @@ jobs:
       - name: Publish to npm
         run: |
           npm version $NEW_VERSION
-          yarn publish --tag dev
+          npm publish --tag dev
