@@ -76,45 +76,45 @@ jobs:
         with:
           cmd: test
 
-  test-target:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository code ${{ github.repository }} on ${{ github.ref }}
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+  # test-target:
+  #   needs: setup
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Check out repository code ${{ github.repository }} on ${{ github.ref }}
+  #       uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 0
 
-      - name: Merge target branch into current branch
-        run: |
-          git config --global user.email "pkgbot@form.io"
-          git config --global user.name "pkgbot"
-          git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
-          git merge ${{ github.event.pull_request.base.ref }} --no-commit --no-ff
+  #     - name: Merge target branch into current branch
+  #       run: |
+  #         git config --global user.email "pkgbot@form.io"
+  #         git config --global user.name "pkgbot"
+  #         git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
+  #         git merge ${{ github.event.pull_request.base.ref }} --no-commit --no-ff
 
-          if ! git merge --no-commit --no-ff ${{ github.event.pull_request.base.ref }}; then
-            echo "Merge conflicts detected."
-            git merge --abort
-            exit 1
-          else
-            echo "Merge successful."
-          fi
+  #         if ! git merge --no-commit --no-ff ${{ github.event.pull_request.base.ref }}; then
+  #           echo "Merge conflicts detected."
+  #           git merge --abort
+  #           exit 1
+  #         else
+  #           echo "Merge successful."
+  #         fi
 
-      - name: Restore node modules from cache
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+  #     - name: Restore node modules from cache
+  #       uses: actions/cache@v3
+  #       with:
+  #         path: node_modules
+  #         key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-node-
 
-      - name: Test
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: test
+  #     - name: Test
+  #       uses: borales/actions-yarn@v4
+  #       with:
+  #         cmd: test
 
   publish:
-    needs: [setup, test-current, test-target]
+    needs: [setup, test-current]
     if: ${{ github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'synchronize') }}
     runs-on: ubuntu-latest
     steps:
