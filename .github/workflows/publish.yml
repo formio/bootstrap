@@ -143,5 +143,12 @@ jobs:
 
       - name: Publish to npm
         run: |
-          npm version $NEW_VERSION
-          npm publish --tag dev
+          if ! git diff-index --quiet HEAD --; then
+            echo "Directory is not clean. Listing changes:"
+            git status
+            exit 1  # Optional: Fail the step explicitly to avoid proceeding
+          else
+            echo "Directory is clean. Proceeding with npm version and publish."
+            npm version $NEW_VERSION
+            npm publish --tag dev
+          fi
