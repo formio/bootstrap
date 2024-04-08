@@ -2,7 +2,7 @@ name: Build, Test, Publish
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
 
 env:
   NODE_VERSION: 18.x
@@ -139,12 +139,5 @@ jobs:
 
       - name: Publish to npm
         run: |
-          if ! git diff-index --quiet HEAD --; then
-            echo "Directory is not clean. Listing changes:"
-            git status
-            exit 1  # Optional: Fail the step explicitly to avoid proceeding
-          else
-            echo "Directory is clean. Proceeding with npm version and publish."
-            npm version $NEW_VERSION
-            yarn publish --tag dev --dry-run
-          fi
+          npm version $NEW_VERSION
+          yarn publish --tag dev --dry-run
