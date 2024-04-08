@@ -5,7 +5,9 @@ on:
     types: [opened, synchronize, reopened]
 
 env:
-  NODE_VERSION: 18.x
+  NODE_VERSION: 20.x
+  GIT_EMAIL: "pkgbot@form.io"
+  GIT_USERNAME: "pkgbot"
 
 jobs:
   setup:
@@ -56,7 +58,7 @@ jobs:
         with:
           cmd: build
 
-  test:
+  test-current:
     needs: setup
     runs-on: ubuntu-latest
     steps:
@@ -76,8 +78,44 @@ jobs:
         with:
           cmd: test
 
+  test-target:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code ${{ github.repository }} on ${{ github.ref }}
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+  
+      - name: Merge target branch into current branch
+        run: |
+          git config --global user.email ${{ env.GIT_EMAIL }}
+          git config --global user.name ${{ env.GIT_USERNAME }}
+          git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
+          git merge ${{ github.event.pull_request.base.ref }} --no-commit --no-ff
+          if ! git merge --no-commit --no-ff ${{ github.event.pull_request.base.ref }}; then
+            echo "Merge conflicts detected."
+            git merge --abort
+            exit 1
+          else
+            echo "Merge successful."
+          fi
+
+      - name: Restore node modules from cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Test
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test
+
   publish:
-    needs: [setup, test]
+    needs: [setup, test-current, test-target]
     if: ${{ github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'synchronize') }}
     runs-on: ubuntu-latest
     steps:
@@ -151,4 +189,4 @@ jobs:
           # This includes all files in the current directory, including untracked ones
           echo "Publishing to npm with untracked changes..."
           npm version $NEW_VERSION --no-git-tag-version
-          yarn publish --tag dev --no-commit-hooks --non-interactive --dry-run
+          yarn publish --tag dev --no-commit-hooks --non-interactive
