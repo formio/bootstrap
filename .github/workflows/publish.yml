@@ -187,6 +187,5 @@ jobs:
           
           # Proceeding with npm version and yarn publish
           # This includes all files in the current directory, including untracked ones
-          echo "Publishing to npm with untracked changes..."
           npm version $NEW_VERSION --no-git-tag-version
           yarn publish --tag dev --no-commit-hooks --non-interactive
