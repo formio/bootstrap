@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap",
-  "version": "3.0.0-rc.22",
+  "version": "3.0.0-rc.23",
   "description": "Bootstrap templates for Form.io forms",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
@@ -71,7 +71,7 @@
     "@types/chai": "^4.3.11",
     "@types/ejs": "^3.1.5",
     "@types/mocha": "^10.0.6",
-    "@types/node": "^20.10.8",
+    "@types/node": "^20.12.7",
     "@types/sinon": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
