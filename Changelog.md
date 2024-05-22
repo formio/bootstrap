@@ -21,6 +21,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - Bootstrap5: Missing icons for panel collapse/uncollapse
  - Bump get-func-name from 2.0.0 to 2.0.2
  - FIO-7933 added PDF Document Designer
+ - FIO-8199: Fixes an issue where Checkbox does not have id and for attributes
+ - #93 - untranslatable builder sidebar search field
+ - FIO-7507 & FIO-7848: publish-dev-tag-to-npm
+ - FIO-8303: fixed data grid templates
 
 ### Changed
  - added support for file synchronization feature
