@@ -1,0 +1,72 @@
+<div class="data-grid-wrapper">
+  <div class="data-grid">
+    <span class="menu-container">
+      <div class="dropdown" ref="menu"></div>
+    </span>
+    <div style="position: relative; max-width: 86vw; display: flex; align-items: center; justify-content: space-between">
+        {% if (ctx.component.enableRowSelect) { %}
+          <div style="display: none; min-height: 20px" ref="selectedInfo">
+              <span style="font-size: 13px"><span ref="selectedRowCounter">{{ctx.selectedRows}}</span> selected</span>
+          </div>
+        {% } %}
+        <div ref="pagination" class="formio-pagination" style="margin-left: auto"></div>
+    </div>
+    <div class="responsive-table">
+      <div class="spinner-wrapper" ref="loader">
+        <div class="spinner-grow"></div>
+      </div>
+      <table class="table{{ ctx.classes }} formio-grid">
+        <thead>
+          <tr>
+            {% if (!ctx.component.components.length) { %}
+              <th>No components have been set up to display in the Data Table. "Table View" must be checked for components to render.</th>
+            {% } %}
+              {% if (ctx.component.enableRowSelect) { %}
+              <th style="width: 2rem">
+                  <input type="checkbox" name="selectAll" id="selectAll" ref="selectAll" title="select All">
+              </th>
+              {% } %}
+            {% ctx.component.components.forEach(function(comp, i) { %}
+              {% if (comp.show) { %}
+              <th>
+                <span>{{ comp.label || comp.key }}</span>
+                {% if (ctx.options.sortable && comp.sortable) { %}
+                <span class="sort-btn {{ (ctx.component.sort.key === comp.key || ctx.component.sort.key === comp.columnQueryProperty) ? 'sorted' : '' }}" ref="sort">
+                  {{ ctx.component.sort.isAsc ? '↑' : '↓' }}
+                </span>
+                {% } %}
+                {% if (!ctx.options.hideMenu) { %}
+                <span class="menu">
+                  <div class="menu-container">
+                    <span class="menu-btn{{ (ctx.component.filters[comp.key] || ctx.component.filters[comp.columnQueryProperty]) ? ' filters-applied' : '' }}" ref="menuBtn">⋮</span>
+                  </div>
+                </span>
+                {% } %}
+              </th>
+              {% } %}
+            {% }); %}
+            {% if ((ctx.component.showEditBtn || ctx.component.showDeleteBtn || ctx.component.showDeleteAllBtn) 
+              && ctx.data.length
+              && !ctx.options.pdf) { %}
+            <th class="formio-grid-ops position-sticky p-0 border-left-0" style="background-color: white; ">
+              <div class="border-left border-right" style="height: 48px; padding: 12px 1px;">
+                <span>Actions</span>
+                {% if (ctx.component.showDeleteAllBtn && ctx.data.length) { %}
+                <button class="btn btn p-0 delete-all-btn delete-all-btn formio-grid-ops-button {{ ctx.options.readOnly ? 'disabled' : '' }}" ref="deleteAll" style="padding: 0;"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                {% } %}
+              </div>
+            </th>
+            {% } %}
+          </tr>
+        </thead>
+        <tbody ref="tbody"></tbody>
+      </table>
+    </div>
+    <div class="formio-grid-bottom" {{ctx.component.showAddBtn ? 'style="margin-top: 10px"' : ""}}>
+      <div ref="paginationBottom"></div>
+      {% if (ctx.component.showAddBtn && !ctx.options.pdf) { %}
+        <div class="btn btn-primary formio-new-button {{ ctx.options.readOnly ? 'disabled' : '' }}" ref="addRow">+</div>
+      {% } %}
+    </div>
+  </div>
+</div>
