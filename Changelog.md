@@ -25,6 +25,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - #93 - untranslatable builder sidebar search field
  - FIO-7507 & FIO-7848: publish-dev-tag-to-npm
  - FIO-8303: fixed data grid templates
+ - FIO-8426: added eSignature icon classes
+ - Adding the Grid templates to keep the build size low on the grid library
+ - Fixes for 5.x renderer
 
 ### Changed
  - added support for file synchronization feature
