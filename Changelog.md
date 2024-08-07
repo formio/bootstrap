@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.0-rc.37
+### Changed
+ - FIO-8752: fix tabindex for keyboard actions
+
 ## 3.0.0-rc.36
 
 ## 3.0.0-rc.26
