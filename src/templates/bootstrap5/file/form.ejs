@@ -119,7 +119,7 @@
         <span>
           <img ref="fileImage" src="" alt="{{file.originalName || file.name}}" style="width:{{ctx.component.imageSize}}px">
           {% if (!ctx.disabled) { %}
-            <i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink"></i>
+            <i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink" aria-label="Remove button. Press to remove {{file.originalName || file.name}} file"></i>
           {% } %}
         </span>
       </div>
