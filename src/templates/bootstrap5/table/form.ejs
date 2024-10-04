@@ -9,7 +9,7 @@
   <thead>
     <tr>
       {% ctx.component.header.forEach(function(header) { %}
-      <th>{{ctx.t(header)}}</th>
+      <th scope="col">{{ctx.t(header)}}</th>
       {% }) %}
     </tr>
   </thead>
@@ -18,7 +18,7 @@
     {% ctx.tableComponents.forEach(function(row, rowIndex) { %}
     <tr ref="row-{{ctx.id}}">
       {% row.forEach(function(column, colIndex) { %}
-      <td ref="{{ctx.tableKey}}-{{rowIndex}}"{% if (ctx.cellClassName) { %} class="{{ctx.cellClassName}}"{% } %}>{{column}}</td>
+      <td scope="col" ref="{{ctx.tableKey}}-{{rowIndex}}"{% if (ctx.cellClassName) { %} class="{{ctx.cellClassName}}"{% } %}>{{column}}</td>
       {% }) %}
     </tr>
     {% }) %}
