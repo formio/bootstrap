@@ -112,7 +112,7 @@ export default (iconset, name, spinning) => {
         case 'new-window':
             biName = 'window-plus';
             break;
-        case 'move':
+        case 'arrows':
             biName = 'arrows-move';
             break;
         case 'edit':
