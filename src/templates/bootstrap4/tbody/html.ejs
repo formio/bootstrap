@@ -9,10 +9,10 @@
       {% } %}
     {% row.forEach(function(rowComp) { %}
       {% if (rowComp.component.show) { %}
-      <td 
+      <td
         {{ ctx.component.cellMaxWidth ? 'style="max-width:'+ ctx.component.cellMaxWidth + ';"' : ''}}
         {{ ctx.component.clipCells ? 'class="clip"' : ''}}>
-          {{ ctx.instance.hook('format', rowComp.component.key, rowComp.dataValue) }}
+          {{ ctx.instance.hook('format', rowComp.component.key, rowComp.dataValue, rowComp.rowIndex) }}
       </td>
       {% } %}
     {% }); %}
