@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.0-rc.39
+### Changed
+ - FIO-9169 Changed fontawesome name of move icon
+ - FIO-8808: Bootstrap 5 class scan
+
 ## 3.0.0-rc.38
 ### Changed
  - FIO-8234/FIO-7195: Fixes an issue where value properties are shown instead of labels for Select component with Resource/URL data sources in DataTable
