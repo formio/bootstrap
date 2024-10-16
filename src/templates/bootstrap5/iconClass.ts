@@ -110,6 +110,7 @@ export default (iconset, name, spinning) => {
             biName = 'x-circle';
             break;
         case 'new-window':
+            name = 'window-restore';
             biName = 'window-plus';
             break;
         case 'move':
