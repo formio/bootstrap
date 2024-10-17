@@ -104,6 +104,7 @@ export default (iconset, name, spinning) => {
             biName = 'plus-lg';
             break;
         case 'question-sign':
+            name = 'question-circle';
             biName = 'question-circle';
             break;
         case 'remove-circle':
