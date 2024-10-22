@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.0-rc.40
+### Changed
+ - FIO-9226 Fixed tooltips when fontawesome fallback is used
+ - FIO-9227 Fixed fontawesome fallback for help link
+
 ## 3.0.0-rc.39
 ### Changed
  - FIO-9169 Changed fontawesome name of move icon
