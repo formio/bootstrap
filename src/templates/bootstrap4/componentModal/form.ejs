@@ -9,9 +9,9 @@
       {% } else { %}
       <button class="formio-dialog-close float-right btn btn-secondary btn-sm" aria-label="Close button. Click to get back to the form" ref="modalClose"></button>
       {% } %}
-      <div ref="modalContents">
+      <div ref="modalContent">
         {% if (ctx.visible) { %}
-        {{ctx.children}}
+        <div ref="componentContent">{{ctx.children}}</div>
         {% } %}
         <div class="formio-dialog-buttons">
           {% if (ctx.options.vpat) { %}
