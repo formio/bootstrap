@@ -15,6 +15,9 @@
       <div class="spinner-wrapper" ref="loader">
         <div class="spinner-grow"></div>
       </div>
+      {% if (ctx.component.selectAllRows) { %}
+      <div ref="selectAllRowsContainer"></div>
+      {% } %}
       <table class="table{{ ctx.classes }} formio-grid">
         <thead>
           <tr>
