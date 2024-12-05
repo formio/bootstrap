@@ -1,5 +1,5 @@
 <div class="mb-2 card border">
-  {% if (!ctx.component.hideLabel || ctx.builder || ctx.component.collapsible || ctx.component.tooltip) { %}
+  {% if (!ctx.label.hidden || ctx.builder || ctx.component.collapsible || ctx.component.tooltip) { %}
   <div class="card-header {{ctx.transform('class', 'bg-' + ctx.component.theme)}}"
     {% if (ctx.component.collapsible) { %}
     tabindex="0"
@@ -13,7 +13,7 @@
       {% if (ctx.component.collapsible) { %}
         <i class="formio-collapse-icon {{ctx.iconClass(ctx.collapsed ? 'plus-square-o' : 'minus-square-o')}} text-muted" data-title="Collapse Panel"></i>
       {% } %}
-      {% if (!ctx.component.hideLabel || ctx.builder) { %}
+      {% if (!ctx.label.hidden || ctx.builder) { %}
       {{ctx.t(ctx.component.title, { _userInput: true })}}
       {% } %}
       {% if (ctx.component.tooltip) { %}
