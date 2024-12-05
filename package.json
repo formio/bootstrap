@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap",
-  "version": "3.0.0-rc.41",
+  "version": "3.0.0",
   "description": "Bootstrap templates for Form.io forms",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
