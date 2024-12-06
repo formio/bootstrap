@@ -124,6 +124,18 @@
         </span>
       </div>
     {% }) %}
+    {% ctx.filesToUpload.forEach(function(file) { %}
+      {% if (file.status === 'progress') { %}
+        <div class="text-right">{{ctx.fileSize(file.size)}}</div>
+        <div class="status progress">
+          <div id={{file.id}} class="progress-bar" role="progressbar" aria-valuenow="{{file.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{file.progress}}%" ref="progress">
+            <span class="sr-only">{{file.progress}}% {{ctx.t('Complete')}}</span>
+          </div>
+        </div>
+      {% } else { %}
+        <div class="status text-{{file.status === 'error' ? 'danger': file.status}}">{{ctx.t(file.message)}}</div>
+      {% } %}
+    {% }) %}
   </div>
 {% } %}
 {% if (!ctx.disabled && (ctx.component.multiple || !ctx.files.length)) { %}
