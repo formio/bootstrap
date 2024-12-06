@@ -1,0 +1,23 @@
+<div class="formio-grid-select-wrapper alert text-secondary text-center">
+  <span class="formio-grid-select-info">
+    {% if (!ctx.allRowsSelected) { %}
+      All {{ ctx.totalSelected }} records on this page are selected.
+    {% } %}
+    {% if (ctx.allRowsSelected) { %}
+      All {{ ctx.totalItems }} records in the table are selected.
+    {% } %}
+  </span>
+  <span class="formio-grid-select-spinner">
+    <div class="spinner-grow"></div>
+  </span>
+  <span ref="selectAllBtn" class="formio-grid-select-btn text-primary">
+    <span>
+      {% if (!ctx.allRowsSelected) { %}
+        Select all {{ ctx.totalItems }} items in the table.
+      {% } %}
+      {% if (ctx.allRowsSelected) { %}
+        Clear selection.
+      {% } %}
+    </span>
+  </span>
+</div>
