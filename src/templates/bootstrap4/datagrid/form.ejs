@@ -38,8 +38,8 @@
     {% } %}
     <tr ref="{{ctx.datagridKey}}-row">
       {% if (ctx.component.reorder) { %}
-        <td class="col-1">
-          <button type="button" class="formio-drag-button btn btn-default fa fa-bars" data-key="{{ctx.datagridKey}}"></button>
+        <td>
+          <button type="button" class="formio-drag-button btn btn-default fa fa-bars" data-key="{{ctx.datagridKey}}" style="display: block; margin: 0 auto"></button>
         </td>
       {% } %}
       {% ctx.columns.forEach(function(col) { %}
@@ -49,8 +49,8 @@
       {% }) %}
       {% if (ctx.hasExtraColumn) { %}
         {% if (ctx.hasRemoveButtons) { %}
-        <td class="col-1">
-          <button type="button" class="btn btn-secondary formio-button-remove-row" ref="{{ctx.datagridKey}}-removeRow" tabindex="{{ctx.tabIndex}}" aria-label="{{ctx.t('remove')}}">
+        <td>
+          <button type="button" class="btn btn-secondary formio-button-remove-row" ref="{{ctx.datagridKey}}-removeRow" tabindex="{{ctx.tabIndex}}" aria-label="{{ctx.t('remove')}}" style="display: block; margin: 0 auto">
             <i class="{{ctx.iconClass('remove-circle')}}"></i>
           </button>
         </td>
