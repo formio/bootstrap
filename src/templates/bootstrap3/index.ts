@@ -42,6 +42,7 @@ import pagination from './pagination';
 import columnMenu from './column-menu';
 import tbody from './tbody';
 import paginationBottom from './pagination-bottom';
+import selectAllContent from './selectAllContent';
 
 export default {
   transform(type, text) {
@@ -58,6 +59,7 @@ export default {
     if (builder.scrollResizeObserver) {
       builder.scrollResizeObserver.disconnect();
     }
+    // @ts-ignore
     builder.scrollResizeObserver = new ResizeObserver(() => {
       setTimeout(() => {
         const { form, sidebar } = builder.refs;
@@ -124,5 +126,6 @@ export default {
   pagination,
   columnMenu,
   tbody,
-  paginationBottom
+  paginationBottom,
+  selectAllContent
 };
