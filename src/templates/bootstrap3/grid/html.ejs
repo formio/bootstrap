@@ -7,7 +7,7 @@
         {% if (ctx.component.enableRowSelect) { %}
         <div style="min-height: 20px" >
             {% if (ctx.selectedRows) { %}
-            <span style=" font-size: 13px">{{ctx.selectedRows}} selected</span>
+            <span style=" font-size: 13px">{{ctx.selectedRows}} {{ctx.t('selected')}}</span>
             {% } %}
         </div>
         {% } %}
@@ -21,7 +21,7 @@
         <thead>
           <tr>
             {% if (!ctx.component.components.length) { %}
-              <th>No components have been set up to display in the Data Table. "Table View" must be checked for components to render.</th>
+              <th>{{ctx.t('noComponentsSetInGrid')}}</th>
             {% } %}
             {% if (ctx.component.enableRowSelect) { %}
             <th style="width: 2rem">
@@ -32,7 +32,7 @@
             {% ctx.component.components.forEach(function(comp, i) { %}
               {% if (comp.show) { %}
               <th>
-                <span>{{ comp.label || comp.key }}</span>
+                <span>{{ ctx.t(comp.label || comp.key, { _userInput: true }) }}</span>
                 {% if (ctx.options.sortable && comp.sortable) { %}
                 <span class="sort-btn {{ ctx.component.sort.key === comp.key ? 'sorted' : '' }}" ref="sort">
                   {{ ctx.component.sort.isAsc ? '↑' : '↓' }}
@@ -53,7 +53,7 @@
               && !ctx.options.pdf) { %}
             <th class="formio-grid-ops border-left-0" style="background-color: white; position: sticky; padding: 0;">
               <div class="formio-actions-header">
-                <span>Actions</span>
+                <span>{{ctx.t('actions')}}</span>
                 {% if (ctx.component.showDeleteAllBtn && ctx.data.length) { %}
                 <button class="btn btn p-0 delete-all-btn delete-all-btn formio-grid-ops-button {{ ctx.options.readOnly ? 'disabled' : '' }}" ref="deleteAll" style="padding: 0;"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 {% } %}

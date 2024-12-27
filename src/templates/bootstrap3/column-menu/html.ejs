@@ -1,12 +1,12 @@
 <div ref="menu">
   <ul class="dropdown-menu checkbox-menu allow-focus" ref="dropdown">
     {% if (ctx.options.sortable && ctx.component && ctx.component.sortable) { %}
-    <li class="dropdown-item" ref="sortAscending">↑ Sort Ascending</li>
-    <li class="dropdown-item" ref="sortDescending">↓ Sort Descending</li>
+    <li class="dropdown-item" ref="sortAscending">↑ {{ctx.t('sortAscending')}}</li>
+    <li class="dropdown-item" ref="sortDescending">↓ {{ctx.t('sortDescending')}}</li>
     <li ref="rootItem" role="separator" class="divider"></li>
     {% } %}
     <li ref="rootItem" class="dropdown-item">
-      Columns <span class="arrow-right">›</span>
+      {{ctx.t('columns')}} <span class="arrow-right">›</span>
       <ul ref="nestedDropdown" class="dropdown-menu checkbox-menu allow-focus">
         {% ctx.components.forEach(function(comp) { %}
         <li class="dropdown-item">
@@ -18,7 +18,7 @@
                 type="checkbox"
                 class="form-check-input">
             <span class="form-check-label">
-              {{ comp.label }}
+              {{ ctx.t(comp.label, { _userInput: true }) }}
             </span>
           </label>
         </li>
@@ -28,15 +28,15 @@
     {% if (ctx.options.filterable && ctx.component && ctx.component.filterable) { %}
     <li ref="rootItem" role="separator" class="divider"></li>
     <li ref="rootItem" class="dropdown-item">
-      Filter <span class="arrow-right">›</span>
+      {{ctx.t('filter')}} <span class="arrow-right">›</span>
       <ul ref="nestedDropdown" class="dropdown-menu">
         <form ref="filterForm" class="px-3 py-2">
-          Show items with value that:
+          {{ctx.t('showItemsWithValue')}}
           <div class="form-group">
             <select ref="filterType" class="form-control">
               {% ctx.filterTypes.forEach(function(filterType) { %}
                 {% if (!(ctx.hideFilters.includes(ctx.component.key) && (['startsWith', 'contain', 'notContain', 'endsWith', 'matches' ].includes(filterType.type)))) { %}
-                  <option value="{{ filterType.type }}">{{ filterType.label }}</option>
+                  <option value="{{ filterType.type }}">{{ ctx.t(filterType.label) }}</option>
                 {% } %}
               {% }); %}
             </select>
@@ -45,8 +45,8 @@
             <input type="text" ref="filterInput" name="{{ ctx.component && ctx.component.key }}" class="form-control" placeholder="Filter">
           </div>
           <div class="form-row btn-toolbar">
-            <button ref="filterButton" type="button" class="btn btn-primary">Filter</button>
-            <button ref="clearBtn" type="button" class="btn btn-secondary">Clear</button>
+            <button ref="filterButton" type="button" class="btn btn-primary">{{ctx.t('filter')}}</button>
+            <button ref="clearBtn" type="button" class="btn btn-secondary">{{ctx.t('clear')}}</button>
           </div>
         </form>
       </ul>
