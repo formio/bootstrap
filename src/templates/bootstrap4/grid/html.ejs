@@ -6,7 +6,7 @@
     <div style="position: relative; max-width: 86vw; display: flex; align-items: center; justify-content: space-between">
         {% if (ctx.component.enableRowSelect) { %}
           <div style="display: none; min-height: 20px" ref="selectedInfo">
-              <span style="font-size: 13px"><span ref="selectedRowCounter">{{ctx.selectedRows}}</span> selected</span>
+              <span style="font-size: 13px"><span ref="selectedRowCounter">{{ctx.selectedRows}}</span> {{ctx.t('selected')}}</span>
           </div>
         {% } %}
         <div ref="pagination" class="formio-pagination" style="margin-left: auto"></div>
@@ -22,7 +22,7 @@
         <thead>
           <tr>
             {% if (!ctx.component.components.length) { %}
-              <th>No components have been set up to display in the Data Table. "Table View" must be checked for components to render.</th>
+              <th>{{ctx.t('noComponentsSetInGrid')}}</th>
             {% } %}
               {% if (ctx.component.enableRowSelect) { %}
               <th style="width: 2rem">
@@ -32,7 +32,7 @@
             {% ctx.component.components.forEach(function(comp, i) { %}
               {% if (comp.show) { %}
               <th>
-                <span>{{ comp.label || comp.key }}</span>
+                <span>{{ ctx.t(comp.label || comp.key, { _userInput: true }) }}</span>
                 {% if (ctx.options.sortable && comp.sortable) { %}
                 <span class="sort-btn {{ (ctx.component.sort.key === comp.key || ctx.component.sort.key === comp.columnQueryProperty) ? 'sorted' : '' }}" ref="sort">
                   {{ ctx.component.sort.isAsc ? '↑' : '↓' }}
@@ -53,7 +53,7 @@
               && !ctx.options.pdf) { %}
             <th class="formio-grid-ops position-sticky p-0 border-left-0" style="background-color: white; ">
               <div class="border-left border-right" style="height: 48px; padding: 12px 1px;">
-                <span>Actions</span>
+                <span>{{ctx.t('actions')}}</span>
                 {% if (ctx.component.showDeleteAllBtn && ctx.data.length) { %}
                 <button class="btn btn p-0 delete-all-btn delete-all-btn formio-grid-ops-button {{ ctx.options.readOnly ? 'disabled' : '' }}" ref="deleteAll" style="padding: 0;"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 {% } %}

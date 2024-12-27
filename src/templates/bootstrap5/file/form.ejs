@@ -3,15 +3,15 @@
 {% } %}
 {% if (!ctx.self.imageUpload) { %}
   {% if (ctx.options.vpat) { %}
-    <div>{{(!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern}}</div>
+    <div>{{(!ctx.component.filePattern || ctx.component.filePattern === '*') ? ctx.t('anyFileTypesAllowed') : ctx.t('allowedFileTypes') + ': ' + ctx.component.filePattern}}</div>
   {% } %}
   <ul class="list-group list-group-striped">
     <li class="list-group-item list-group-header hidden-xs hidden-sm">
       <div class="row">
-        <div class="col-md-{{ctx.columns.name}}"><strong>{{ctx.t('File Name')}}</strong></div>
-        <div class="col-md-{{ctx.columns.size}}"><strong>{{ctx.t('Size')}}</strong></div>
+        <div class="col-md-{{ctx.columns.name}}"><strong>{{ctx.t('fileName')}}</strong></div>
+        <div class="col-md-{{ctx.columns.size}}"><strong>{{ctx.t('size')}}</strong></div>
         {% if (ctx.self.hasTypes) { %}
-          <div class="col-md-{{ctx.columns.type}}"><strong>{{ctx.t('Type')}}</strong></div>
+          <div class="col-md-{{ctx.columns.type}}"><strong>{{ctx.t('type')}}</strong></div>
         {% } %}
         <div class="col-md-{{ctx.columns.actions}} justify-center">
           {% if (ctx.showSyncButton) { %}
@@ -19,7 +19,7 @@
               class="btn btn-primary btn-sm"
               ref="syncNow"
               {% if (ctx.disabled || ctx.isSyncing) { %}disabled=true{% } %}
-            >{{ctx.isSyncing ? ctx.t('Syncing...') : ctx.t('Sync Now')}}</button>
+            >{{ctx.isSyncing ? ctx.t('syncing') : ctx.t('syncNow')}}</button>
           {% } %}
         </div>
       </div>
@@ -32,7 +32,7 @@
               {{file.originalName || file.name}}
             {% } else { %}
               <a href="{{file.url || '#'}}" target="_blank" ref="fileLink">
-                <span class="visually-hidden">{{ctx.t('Press to open ')}}</span>{{file.originalName || file.name}}
+                <span class="visually-hidden">{{ctx.t('pressToOpen') + ' '}}</span>{{file.originalName || file.name}}
               </a>
             {% } %}
           </div>
@@ -86,7 +86,7 @@
             {% if (file.status === 'progress') { %}
               <div class="status progress">
                 <div id="{{file.id}}" class="progress-bar" role="progressbar" aria-valuenow="{{file.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{file.progress}}%" ref="progress">
-                  <span class="visually-hidden">{{file.progress}}% {{ctx.t('Complete')}}</span>
+                  <span class="visually-hidden">{{file.progress}}% {{ctx.t('completeStatus')}}</span>
                 </div>
               </div>
             {% } else { %}
@@ -119,7 +119,7 @@
         <span>
           <img ref="fileImage" src="" alt="{{file.originalName || file.name}}" style="width:{{ctx.component.imageSize}}px">
           {% if (!ctx.disabled) { %}
-            <i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink" aria-label="{{ctx.t('Remove button. Press to remove ' + (file.originalName || file.name) + ' file')}}"></i>
+            <i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink" aria-label="{{ctx.t('removeBtnPressToRemove') + ' ' + (file.originalName || file.name) + ' ' + ctx.t('file')}}"></i>
           {% } %}
         </span>
       </div>
@@ -129,7 +129,7 @@
         <div class="text-end">{{ctx.fileSize(file.size)}}</div>
         <div class="status progress">
           <div id="{{file.id}}" class="progress-bar" role="progressbar" aria-valuenow="{{file.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{file.progress}}%" ref="progress">
-            <span class="visually-hidden">{{file.progress}}% {{ctx.t('Complete')}}</span>
+            <span class="visually-hidden">{{file.progress}}% {{ctx.t('completeStatus')}}</span>
           </div>
         </div>
       {% } else { %}
@@ -141,34 +141,34 @@
 {% if (!ctx.disabled && (ctx.component.multiple || !ctx.files.length)) { %}
   {% if (ctx.self.useWebViewCamera) { %}
     <div class="fileSelector">
-      <button class="btn btn-primary" ref="galleryButton"><i class="{{ctx.iconClass('book')}}"></i> {{ctx.t('Gallery')}}</button>
-      <button class="btn btn-primary" ref="cameraButton"><i class="{{ctx.iconClass('camera')}}"></i> {{ctx.t('Camera')}}</button>
+      <button class="btn btn-primary" ref="galleryButton"><i class="{{ctx.iconClass('book')}}"></i> {{ctx.t('gallery')}}</button>
+      <button class="btn btn-primary" ref="cameraButton"><i class="{{ctx.iconClass('camera')}}"></i> {{ctx.t('camera')}}</button>
     </div>
   {% } else if (!ctx.self.cameraMode) { %}
     <div class="fileSelector" ref="fileDrop" {{ctx.fileDropHidden ?'hidden' : ''}}>
       {% if (!ctx.self.isMobile.any) { %}
-        <i class="{{ctx.iconClass('cloud-upload')}}"></i> {{ctx.t('Drop files to attach,')}}
+        <i class="{{ctx.iconClass('cloud-upload')}}"></i> {{ctx.t('dropFilesToAttach')}}
       {% } %}
       {% if (ctx.self.imageUpload && ctx.component.webcam) { %}
-        <a href="#" ref="toggleCameraMode"><i class="{{ctx.iconClass('camera')}}"></i>{{ctx.t('Use Camera')}}</a>
+        <a href="#" ref="toggleCameraMode"><i class="{{ctx.iconClass('camera')}}"></i>{{ctx.t('useCamera')}}</a>
         {{ctx.t('or')}}
       {% } %}
       <a href="#" ref="fileBrowse" class="browse">
         {% if (ctx.self.isMobile.any && ctx.component.capture) { %}
           {% if (ctx.component.filePattern && ctx.component.filePattern.includes("video")) { %}
-            <i class="{{ctx.iconClass('video')}}"></i>{{ctx.t('Capture Video')}}
+            <i class="{{ctx.iconClass('video')}}"></i>{{ctx.t('captureVideo')}}
           {% } else if (ctx.component.filePattern && ctx.component.filePattern.includes("audio")) { %}
-            <i class="{{ctx.iconClass('microphone')}}"></i>{{ctx.t('Capture Audio')}}
+            <i class="{{ctx.iconClass('microphone')}}"></i>{{ctx.t('captureAudio')}}
           {% } else { %}
-            <i class="{{ctx.iconClass('camera')}}"></i>{{ctx.t('Capture Image')}}
+            <i class="{{ctx.iconClass('camera')}}"></i>{{ctx.t('captureImage')}}
           {% } %}
         {% } else { %}
-          <i class="{{ctx.iconClass('folder-open')}}"></i>{{ctx.t('Browse Files')}}
+          <i class="{{ctx.iconClass('folder-open')}}"></i>{{ctx.t('browseFiles')}}
         {% } %}
         <span class="visually-hidden">
-          {{ctx.t('Browse to attach file for ' + ctx.component.label + '. ' +
-          (ctx.component.description ? ctx.component.description + '. ' : '') +
-          ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern))}}
+          {{ctx.t('browseToAttachFileFor') + ' ' + ctx.t(ctx.component.label, { _userInput: true }) + '. ' +
+            (ctx.component.description ? ctx.t(ctx.component.description, { _userInput: true }) + '. ' : '') +
+            ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? ctx.t('anyFileTypesAllowed') : ctx.t('allowedFileTypes') + ': ' + ctx.component.filePattern)}}
         </span>
       </a>
       <div ref="fileProcessingLoader" class="loader-wrapper">
@@ -179,23 +179,23 @@
     <div class="video-container">
       <video class="video" autoplay="true" ref="videoPlayer" tabindex="-1"></video>
     </div>
-    <button class="btn btn-primary" ref="takePictureButton"><i class="{{ctx.iconClass('camera')}}"></i> {{ctx.t('Take Picture')}}</button>
-    <button class="btn btn-primary" ref="toggleCameraMode">{{ctx.t('Switch to file upload')}}</button>
+    <button class="btn btn-primary" ref="takePictureButton"><i class="{{ctx.iconClass('camera')}}"></i> {{ctx.t('takePicture')}}</button>
+    <button class="btn btn-primary" ref="toggleCameraMode">{{ctx.t('switchToFileUpload')}}</button>
   {% } %}
 {% } %}
 {% if (!ctx.component.storage || ctx.support.hasWarning) { %}
   <div class="alert alert-warning">
     {% if (!ctx.component.storage) { %}
-      <p>{{ctx.t('No storage has been set for this field. File uploads are disabled until storage is set up.')}}</p>
+      <p>{{ctx.t('noStorageSet')}}</p>
     {% } %}
     {% if (!ctx.support.filereader) { %}
-      <p>{{ctx.t('File API & FileReader API not supported.')}}</p>
+      <p>{{ctx.t('noFileApiSupport')}}</p>
     {% } %}
     {% if (!ctx.support.formdata) { %}
-      <p>{{ctx.t("XHR2's FormData is not supported.")}}</p>
+      <p>{{ctx.t('noFormDataSupport')}}</p>
     {% } %}
     {% if (!ctx.support.progress) { %}
-      <p>{{ctx.t("XHR2's upload progress isn't supported.")}}</p>
+      <p>{{ctx.t('noProgressSupport')}}</p>
     {% } %}
   </div>
 {% } %}

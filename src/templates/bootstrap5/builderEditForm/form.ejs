@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col col-sm-6">
-    <p class="lead">{{ctx.t(ctx.componentInfo.title, { _userInput: true })}} {{ctx.t('Component')}}</p>
+    <p class="lead">{{ctx.t(ctx.componentInfo.title, { _userInput: true })}} {{ctx.t('component')}}</p>
   </div>
   {% if (ctx.helplinks) { %}
   <div class="col col-sm-6">
     <div class="float-end" style="margin-right: 20px; margin-top: 10px">
       <a href="{{ctx.t(ctx.helplinks + ctx.componentInfo.documentation)}}" target="_blank" rel="noopener noreferrer">
-        <i class="{{ctx.iconClass('new-window')}}"></i> {{ctx.t('Help')}}
+        <i class="{{ctx.iconClass('new-window')}}"></i> {{ctx.t('help')}}
       </a>
     </div>
   </div>
@@ -19,11 +19,11 @@
     </div>
     {% if (!ctx.showPreview) { %}
     <div style="margin-top: 10px;">
-      <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('Save')}}</button>
-      <button class="btn btn-secondary" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
-      <button class="btn btn-danger" ref="removeButton">{{ctx.t('Remove')}}</button>
+      <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('save')}}</button>
+      <button class="btn btn-secondary" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('cancel')}}</button>
+      <button class="btn btn-danger" ref="removeButton">{{ctx.t('remove')}}</button>
       {% if (ctx.preview) { %}
-      <button class="btn btn-primary float-right" ref="previewButton">{{ctx.t('Show preview')}}</button>
+      <button class="btn btn-primary float-right" ref="previewButton">{{ctx.t('showPreview')}}</button>
       {% } %}
     </div>
     {% } %}
@@ -32,7 +32,7 @@
   <div class="col col-sm-6">
     <div class="card panel preview-panel">
       <div class="card-header">
-        <h4 class="card-title mb-0">{{ctx.t('Preview')}}</h4>
+        <h4 class="card-title mb-0">{{ctx.t('preview')}}</h4>
       </div>
       <div class="card-body">
         <div class="component-preview" ref="preview">
@@ -46,10 +46,10 @@
     </div>
     {% } %}
     <div style="margin-top: 10px;">
-      <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('Save')}}</button>
-      <button class="btn btn-secondary" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
-      <button class="btn btn-danger" ref="removeButton">{{ctx.t('Remove')}}</button>
-      <button class="btn btn-primary float-end" ref="previewButton">{{ctx.t('Hide preview')}}</button>
+      <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('save')}}</button>
+      <button class="btn btn-secondary" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('cancel')}}</button>
+      <button class="btn btn-danger" ref="removeButton">{{ctx.t('remove')}}</button>
+      <button class="btn btn-primary float-end" ref="previewButton">{{ctx.t('hidePreview')}}</button>
     </div>
   </div>
   {% } %}

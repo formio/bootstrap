@@ -29,7 +29,7 @@
         {% if (ctx.mode.manual) { %}checked=true{% } %}
         {% if (ctx.disabled) { %}disabled=true{% } %}
       >
-      <span>{{ ctx.component.switchToManualModeLabel }}</span>
+      <span>{{ ctx.t(ctx.component.switchToManualModeLabel) }}</span>
     </label>
   </div>
 {% } %}

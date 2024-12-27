@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col col-sm-6">
-    <p class="lead">{{ctx.t(ctx.componentInfo.title, { _userInput: true })}} {{ctx.t('Component')}}</p>
+    <p class="lead">{{ctx.t(ctx.componentInfo.title, { _userInput: true })}} {{ctx.t('component')}}</p>
   </div>
   {% if (ctx.helplinks) { %}
   <div class="col col-sm-6">
     <div class="pull-right" style="margin-right: 20px; margin-top: 10px">
       <a href="{{ctx.t(ctx.helplinks + ctx.componentInfo.documentation)}}" target="_blank">
-        <i class="{{ctx.iconClass('new-window')}}"> {{ctx.t('Help')}}</i>
+        <i class="{{ctx.iconClass('new-window')}}"> {{ctx.t('help')}}</i>
       </a>
     </div>
   </div>
@@ -19,9 +19,9 @@
     </div>
     {% if (!ctx.preview) { %}
     <div style="margin-top: 10px;">
-      <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('Save')}}</button>
-      <button class="btn btn-default" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
-      <button class="btn btn-danger" ref="removeButton">{{ctx.t('Remove')}}</button>
+      <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('save')}}</button>
+      <button class="btn btn-default" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('cancel')}}</button>
+      <button class="btn btn-danger" ref="removeButton">{{ctx.t('remove')}}</button>
     </div>
     {% } %}
   </div>
@@ -29,7 +29,7 @@
   <div class="col col-sm-6">
     <div class="panel panel-default preview-panel">
       <div class="panel-heading">
-        <h3 class="panel-title">{{ctx.t('Preview')}}</h3>
+        <h3 class="panel-title">{{ctx.t('preview')}}</h3>
       </div>
       <div class="panel-body">
         <div class="component-preview" ref="preview">
@@ -43,9 +43,9 @@
     </div>
     {% } %}
     <div style="margin-top: 10px;">
-      <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('Save')}}</button>
-      <button class="btn btn-default" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
-      <button class="btn btn-danger" ref="removeButton">{{ctx.t('Remove')}}</button>
+      <button class="btn btn-success" style="margin-right: 10px;" ref="saveButton">{{ctx.t('save')}}</button>
+      <button class="btn btn-default" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('cancel')}}</button>
+      <button class="btn btn-danger" ref="removeButton">{{ctx.t('remove')}}</button>
     </div>
   </div>
   {% } %}
