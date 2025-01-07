@@ -18,9 +18,9 @@
           {% if (ctx.openRows[rowIndex] && !ctx.readOnly) { %}
           <td class="editgrid-table-column">
             <div class="editgrid-actions">
-              <button class="btn btn-primary" ref="{{ctx.ref.saveRow}}">{{ctx.t(ctx.component.saveRow || 'Save', { _userInput: true })}}</button>
+              <button class="btn btn-primary" ref="{{ctx.ref.saveRow}}">{{ctx.t(ctx.component.saveRow || 'save', { _userInput: !!ctx.component.saveRow })}}</button>
               {% if (ctx.component.removeRow) { %}
-              <button class="btn btn-danger" ref="{{ctx.ref.cancelRow}}">{{ctx.t(ctx.component.removeRow || 'Cancel', { _userInput: true })}}</button>
+              <button class="btn btn-danger" ref="{{ctx.ref.cancelRow}}">{{ctx.t(ctx.component.removeRow || 'cancel', { _userInput: !!ctx.component.removeRow })}}</button>
               {% } %}
             </div>
           </td>

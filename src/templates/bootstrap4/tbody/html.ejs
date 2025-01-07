@@ -24,7 +24,7 @@
             {% if (ctx.component.showEditBtn) { %}
             <li class="dropdown-item" ref="editRow">
               <span class="btn formio-grid-ops-button" style="padding: 2px; font-size: 10px; line-height: 1.2em; width: 18px;">&#9999;</span>
-              Edit row
+              {{ctx.t('editGridRow')}}
             </li>
             {% } %}
             {% if (ctx.component.showDeleteBtn) { %}
@@ -32,7 +32,7 @@
               <span class="btn formio-grid-ops-button" style="padding: 2px; font-size: 14px; line-height: 1.2em; width: 18px;">
                 <i class="fa fa-trash" aria-hidden="true"></i>
               </span>
-              Delete row
+              {{ctx.t('deleteGridRow')}}
             </li>
             {% } %}
           </ul>

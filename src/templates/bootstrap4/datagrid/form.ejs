@@ -15,10 +15,10 @@
       {% }) %}
       {% if (ctx.hasExtraColumn) { %}
       <th>
-        <span class="sr-only">{{ ctx.t('Add/Remove') }}</span>
+        <span class="sr-only">{{ ctx.t('addOrRemove') }}</span>
         {% if (!ctx.builder && ctx.hasAddButton && ctx.hasTopSubmit) { %}
         <button class="btn btn-primary formio-button-add-row" ref="{{ctx.datagridKey}}-addRow" tabindex="{{ctx.tabIndex}}">
-          <i class="{{ctx.iconClass('plus')}}"></i>{{ctx.t(ctx.component.addAnother || 'Add Another', { _userInput: true })}}
+          <i class="{{ctx.iconClass('plus')}}"></i>{{ctx.t(ctx.component.addAnother || 'addAnother', { _userInput: !!ctx.component.addAnother })}}
         </button>
         {% } %}
       </th>
@@ -69,7 +69,7 @@
     <tr>
       <td colspan="{{ctx.component.layoutFixed ? ctx.numColumns :  ctx.numColumns + 1}}">
         <button class="btn btn-primary formio-button-add-row" ref="{{ctx.datagridKey}}-addRow" tabindex="{{ctx.tabIndex}}">
-          <i class="{{ctx.iconClass('plus')}}"></i> {{ctx.t(ctx.component.addAnother || 'Add Another', { _userInput: true })}}
+          <i class="{{ctx.iconClass('plus')}}"></i> {{ctx.t(ctx.component.addAnother || 'addAnother', { _userInput: !!ctx.component.addAnother })}}
         </button>
       </td>
     </tr>
