@@ -144,5 +144,8 @@ declare const _default: {
     paginationBottom: {
         html: string;
     };
+    selectAllContent: {
+        html: string;
+    };
 };
 export default _default;
