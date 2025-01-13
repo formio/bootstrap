@@ -43,6 +43,9 @@ declare const _default: {
     paginationBottom: {
         html: string;
     };
+    selectAllContent: {
+        html: string;
+    };
     treeView: {
         form: string;
     };
