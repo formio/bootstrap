@@ -29,15 +29,17 @@
         >
           <i class="{{ctx.iconClass('save')}}"></i>
         </div>
-        <div
-          role="button"
-          aria-label="Edit json button. Click to edit json of the current component"
-          tabindex="-1"
-          class="btn btn-xxs btn-default component-settings-button component-settings-button-edit-json" 
-          ref="editJson"
-        >
-          <i class="{{ctx.iconClass('wrench')}}"></i>
-        </div>
+        {% if (ctx.editJson !== false) { %}
+          <div
+            role="button"
+            aria-label="Edit json button. Click to edit json of the current component"
+            tabindex="-1"
+            class="btn btn-xxs btn-default component-settings-button component-settings-button-edit-json" 
+            ref="editJson"
+          >
+            <i class="{{ctx.iconClass('wrench')}}"></i>
+          </div>
+        {% } %}
       {% } %}
       <div
         role="button"
@@ -48,7 +50,7 @@
       >
         <i class="{{ctx.iconClass('move')}}"></i>
       </div>
-      {% if (!(ctx.design && ctx.childComponent.type === 'reviewpage')) { %}
+      {% if (!(ctx.design && ctx.childComponent.type === 'reviewpage') && ctx.editComponent) { %}
         <div
           role="button"
           aria-label="Edit button. Click to open component settings modal window"
