@@ -4,9 +4,38 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased: 3.2.0-rc.1]
+### Changed
+ - FIO-7954: refactored translations
+ - FIO 8727: fix panel component not showing label in data grid
+ - FIO-8465: added templates for select all rows alert
+ - FIO-9245 DataGrid: Fix width and positioning for table buttons
+ - FIO-9377 added progressbar for for file upload with Display as image
+ - fix noop style change
+ - add inline styling for select component height
 
-## [Unreleased: 3.0.0-rc.5]
-### Fixed
+## 3.1.1-rc.1
+### Changed
+ - FIO-9761: fixed an issue where fontawesome icons do not appear
+
+## 3.1.0
+### Changed
+ - Official Release
+ - Revert https://github.com/formio/bootstrap/pull/121 out of 3.1.x branch
+ - FIO-9751 updated modal edit window for components with hidden tabs
+ - Adding component modal ref so components can redraw within a modal.
+
+## 3.0.0
+### Changed
+ - Official Release
+ - FIO-9239:  Added missing sketchpad icons mapping
+ - FIO-9226 Fixed tooltips when fontawesome fallback is used
+ - FIO-9227 Fixed fontawesome fallback for help link
+ - FIO-9169 Changed fontawesome name of move icon
+ - FIO-8808: Bootstrap 5 class scan
+ - FIO-8234/FIO-7195: Fixes an issue where value properties are shown instead of labels for Select component with Resource/URL data sources in DataTable
+ - FIO-9169 Fixed missing icon in formbuilder
+ - FIO-8752: fix tabindex for keyboard actions
  - FIO-5748: changed templates to support collapsible preview in component settings
  - FIO-7224: Changed alignment for PDF condensed mode
  - FIO-7209: Radio works without ValueProperty set
@@ -30,20 +59,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - Fixes for 5.x renderer
  - FIO-8752: fix tabindex for keyboard actions
  - FIO-8234/FIO-7195: Fixes an issue where value properties are shown instead of labels for Select component with Resource/URL data sources in DataTable
-
-### Changed
  - added support for file synchronization feature
-
-## 3.0.0-rc.4
-### Fixed
  - Fixed mjs and cjs template definitions.
-
-## 3.0.0-rc.2
-### Changed
  - Added Bootstrap 5 templates
-
-## 3.0.0-rc.1
-### Changed
  - Added Bootstrap 4 templates.
 
 ## 2.13.0-rc.1
