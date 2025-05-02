@@ -1,4 +1,6 @@
-export default (iconset, name, spinning) => {
+type iconset = 'bi' | 'fa';
+
+export default (iconset: iconset, name: string, spinning: boolean) => {
     let biName = name;
     switch (name) {
         case 'cog':
@@ -164,5 +166,5 @@ export default (iconset, name, spinning) => {
             biName = 'arrow-clockwise';
             break;
     }
-    return spinning ? 'spinner-border spinner-border-sm' : `${iconset} ${iconset}-${name}`;
+    return spinning ? 'spinner-border spinner-border-sm' : `${iconset} ${iconset}-${iconset === 'bi' ? biName : name}`;
 };
