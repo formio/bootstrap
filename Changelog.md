@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased: 3.1.1-rc.3]
+## 3.1.1-rc.3
 ### Changed
  - FIO-10060: Fixes an issue where some bootstrap icons are not displayed
  -FIO-10065: changed name to biname when using bootstrap icons
