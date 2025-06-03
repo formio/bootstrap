@@ -1,22 +1,17 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "preserveConstEnums": true,
-    "noImplicitAny": false,
-    "sourceMap": false,
+    "target": "ES2016", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "lib": ["es2019", "dom"],    
+    "jsx": "react-jsx", /* Specify what JSX code is generated. */
+    "jsxImportSource": "@formio/jsx", /* Specify module specifier used to import the JSX factory functions when using 'jsx: react-jsx*'. */
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "allowJs": false, /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
+    "outDir": "./build", /* Specify an output folder for all emitted files. */
+    "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
+    "strict": true, /* Enable all strict type-checking options. */
+    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
     "declaration": true,
-    "skipLibCheck": true,
-    "rootDir": "src"
   },
-  "include": [
-    "src/*.ts",
-    "src/*.ejs",
-    "src/**/*.ts",
-    "src/**/*.ejs"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts",
-    "gulpfile.js",
-  ]
 }

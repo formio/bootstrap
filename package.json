@@ -1,25 +1,14 @@
 {
   "name": "@formio/bootstrap",
-  "version": "3.1.0-dev.1",
-  "description": "Bootstrap templates for Form.io forms",
+  "version": "0.0.1",
+  "author": "Brendan J Bond <brendanbond@gmail.com>",
+  "description": "A basic default template for Form.io forms.",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
   "exports": {
     ".": {
       "import": "./lib/cjs/bootstrap5.js",
       "require": "./lib/cjs/bootstrap5.js"
-    },
-    "./components": {
-      "import": "./lib/cjs/templates/components/index.js",
-      "require": "./lib/cjs/templates/components/index.js"
-    },
-    "./bootstrap3": {
-      "import": "./lib/cjs/bootstrap3.js",
-      "require": "./lib/cjs/bootstrap3.js"
-    },
-    "./bootstrap4": {
-      "import": "./lib/cjs/bootstrap4.js",
-      "require": "./lib/cjs/bootstrap4.js"
     },
     "./bootstrap5": {
       "import": "./lib/cjs/bootstrap5.js",
@@ -28,74 +17,31 @@
   },
   "typesVersions": {
     "*": {
-      "bootstrap3": [
-        "lib/mjs/bootstrap3.d.ts"
-      ],
-      "bootstrap4": [
-        "lib/mjs/bootstrap4.d.ts"
-      ],
       "bootstrap5": [
         "lib/mjs/bootstrap5.d.ts"
       ]
     }
   },
+  "license": "MIT",
   "scripts": {
-    "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
-    "test": "mocha --require ts-node/register --reporter spec './{,!(node_modules)/**/}*.spec.ts'",
-    "watch": "tsc -w",
-    "build": "rm -rf ./lib && tsc --project tsconfig.cjs.json && tsc --project tsconfig.mjs.json && gulp templates && webpack && node ./libpackage.js",
-    "lint": "tslint -p .",
-    "prepublish": "npm run build"
+    "build": "tsc --project tsconfig.cjs.json && tsc --project tsconfig.mjs.json",
+    "lint": "eslint . --fix",
+    "prettier": "prettier --write .",
+    "test": "vitest"
   },
   "pre-commit": [
-    "lint",
-    "test"
   ],
-  "files": [
-    "lib",
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/formio/bootstrap3.git"
+  "dependencies": {
+    "@formio/standard-template": "file:../standard-template"
   },
-  "keywords": [
-    "Form.io",
-    "USWDS",
-    "Us",
-    "Web",
-    "Design",
-    "Standards"
-  ],
   "devDependencies": {
-    "@types/chai": "^4.3.11",
-    "@types/ejs": "^3.1.5",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "^20.12.7",
-    "@types/sinon": "^17.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "chai": "^5.0.0",
-    "copy-props": "^4.0.0",
-    "gulp": "^4.0.2",
-    "gulp-insert": "^0.5.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-template": "^5.0.0",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
-    "pre-commit": "^1.2.2",
-    "sinon": "^17.0.1",
-    "ts-node": "^10.9.2",
-    "ts-sinon": "^2.0.2",
-    "tslint": "^6.1.3",
-    "typescript": "~5.3.3",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.0.1"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/formio/bootstrap3/issues"
-  },
-  "homepage": "https://github.com/formio/bootstrap3#readme",
-  "dependencies": {}
+    "@formio/core": "^2.3.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.4.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.23.0",
+    "vitest": "^3.0.5"
+  }
 }
