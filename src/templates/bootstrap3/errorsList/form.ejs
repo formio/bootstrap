@@ -7,6 +7,6 @@
       ref = "errorRef"
       tabIndex = "0",
       style = "cursor:pointer;"
-    ><span>{{err.message}}</span></li>
+    ><span>{{ctx.t(err.message, { _userInput: true })}}</span></li>
   {% }) %}
 </ul>
