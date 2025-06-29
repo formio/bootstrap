@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.1.2-rc.1
+### Changed
+ - FIO-9245 DataGrid: Fix width and positioning for table buttons
+ - FIO-10217 fixed the display of interpolated values in BuilderMode
+
 ## 3.1.1
 ### Changed
  - Official Release
