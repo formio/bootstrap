@@ -51,7 +51,7 @@ export default (classes: DefaultClasses) => {
         for={`${instance.id}-${component.key}`}
         id={`l-${instance.id}-${component.key}`}
       >
-        <div>FROM BOOTSTRAP</div>
+        <div>Template redefined in BOOTSTRAP</div>
         {t(component.label ?? '', { _userInput: true })}
         {numericOnly && <span class={templateClasses.hiddenForNumbers}>, {t('numeric only')},</span>}
         {component.tooltip && (
