@@ -188,7 +188,6 @@
         {% } %}
         <span class="visually-hidden">
           {{ctx.t('browseToAttachFileFor') + ' ' + ctx.t(ctx.component.label, { _userInput: true }) + '. ' +
-            (ctx.component.description ? ctx.t(ctx.component.description, { _userInput: true }) + '. ' : '') +
             ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? ctx.t('anyFileTypesAllowed') : ctx.t('allowedFileTypes') + ': ' + ctx.component.filePattern)}}
         </span>
       </a>
