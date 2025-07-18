@@ -1,1 +1,1 @@
-<div ref="value">{% if (ctx.value) { %}{{ctx.value}}{% } else { %}-{% } %}</div>
+<div ref="value">{% if (ctx.value) { %}{{ctx.component.type === 'currency' ? ctx.input.attr.value : ctx.value}}{% } else { %}-{% } %}</div>
