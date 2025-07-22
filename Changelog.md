@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.1.2-rc.2
+### Changed
+ - FIO-9245: Remove unneeded bootstrap class causing display issues in Safari for the data grid while editing the form in the portal
+
 ## 3.1.2-rc.1
 ### Changed
  - FIO-9245 DataGrid: Fix width and positioning for table buttons
