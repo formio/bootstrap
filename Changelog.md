@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased: 3.0.2-rc.3]
+### Changed
+ - Add back "FIO-9761: fixed an issue where fontawesome icons do not appear"
+
 ## 3.0.2-rc.2
 ### Changed
  - Revert "FIO-9761: fixed an issue where fontawesome icons do not appear"
