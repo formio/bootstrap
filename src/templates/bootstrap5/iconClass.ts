@@ -109,7 +109,7 @@ export default (iconset: iconset, name: string, spinning: boolean) => {
             name = 'question-circle';
             biName = 'question-circle';
             break;
-        case 'remove-circle':
+        case 'circle-xmark':
             biName = 'x-circle';
             break;
         case 'new-window':
