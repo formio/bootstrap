@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.1.2-rc.3
+### Changed
+ - FIO-10462: updated circle-remove to circle-xmark for font-awesome icons
+
 ## 3.1.2-rc.2
 ### Changed
  - FIO-9245: Remove unneeded bootstrap class causing display issues in Safari for the data grid while editing the form in the portal
