@@ -1,15 +1,11 @@
 export default {
   form: {
-    label: [
-      'col-form-label',
-      '{{label.className}}'
+    helpBlock: [
+      'help-block'
     ],
     tooltipIcon: [
       '{{iconClass(\'question-sign\')}}',
       'text-muted'
-    ],
-    hiddenForNumbers: [
-      'visually-hidden'
     ]
   },
 };
