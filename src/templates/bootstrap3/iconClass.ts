@@ -14,7 +14,6 @@ export default (iconset, name, spinning) => {
         name = 'question-circle';
         break;
       case 'remove-circle':
-      case 'circle-xmark':
         name = 'times-circle-o';
         break;
       case 'new-window':
