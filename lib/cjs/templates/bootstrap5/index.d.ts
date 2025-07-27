@@ -36,7 +36,7 @@ declare const _default: {
     };
     transform(type: any, text: any, instance: any): any;
     defaultIconset: string;
-    iconClass: (iconset: "fa" | "bi", name: string, spinning: boolean) => string;
+    iconClass: (iconset: any, name: any, spinning: any) => string;
     cssClasses: {
         'border-default': string;
         'formio-tab-panel-active': string;
