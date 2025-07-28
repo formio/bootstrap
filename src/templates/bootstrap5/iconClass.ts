@@ -1,4 +1,6 @@
-export default (iconset, name, spinning) => {
+type iconset = 'bi' | 'fa';
+
+export default (iconset: iconset, name: string, spinning: boolean) => {
     let biName = name;
     switch (name) {
         case 'cog':
@@ -107,7 +109,8 @@ export default (iconset, name, spinning) => {
             name = 'question-circle';
             biName = 'question-circle';
             break;
-        case 'circle-xmark':
+        case 'remove-circle':
+            name = 'circle-xmark';
             biName = 'x-circle';
             break;
         case 'new-window':
@@ -164,5 +167,23 @@ export default (iconset, name, spinning) => {
             biName = 'arrow-clockwise';
             break;
     }
-    return spinning ? 'spinner-border spinner-border-sm' : `${iconset} ${iconset}-${name}`;
+
+    function generateIconClass() {
+        if (spinning){
+            return 'spinner-border spinner-border-sm';
+        }
+        const iconName = iconset === 'bi' ? biName : name;
+        // Handles legacy icons names. For example, fa-remove-circle was changed to fa-circle-xmark in a major version
+        // update of font-awesome. To handle cases where customers are still on a very old version of font-awesome add
+        // a fallback if statement to handle such cases
+        function handleLegacyIconNames() {
+            if (iconset === 'fa' && name === 'circle-xmark'){
+                return `${iconset}-${name} ${iconset}-remove-circle`
+            }
+            return `${iconset}-${iconName}`;
+        }
+
+        return `${iconset} ${handleLegacyIconNames()}`
+    }
+    return generateIconClass();
 };

@@ -13,7 +13,7 @@ export default (iconset, name, spinning) => {
       case 'question-sign':
         name = 'question-circle';
         break;
-      case 'circle-xmark':
+      case 'remove-circle':
         name = 'times-circle-o';
         break;
       case 'new-window':
