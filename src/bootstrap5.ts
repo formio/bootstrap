@@ -1,5 +1,4 @@
-import label from './templates/bootstrap5/label/form.js';
-import { getFrameworkTemplates } from '@formio/standard-template/classes.js';
+import { getFrameworkTemplates } from '@formio/standard-template';
 import addressClasses from './templates/bootstrap5/address/classes.js';
 import builderClasses from './templates/bootstrap5/builder/classes.js';
 import builderComponentClasses from './templates/bootstrap5/builderComponent/classes.js';
@@ -141,9 +140,6 @@ const classes = {
 };
 
 const templates = {
-  label: {
-    form: label
-  },
 };
 
 

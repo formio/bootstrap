@@ -38,9 +38,7 @@ export default {
     groupLabel: [
       'datagrid-group-label',
     ],
-    reorderCell: [
-      'col-md-1',
-    ],
+    reorderCell: [],
     reorderButton: [
       'formio-drag-button',
       'btn',
@@ -51,14 +49,15 @@ export default {
     removeButtonCell: [],
     removeRow: [
       'btn',
-      'btn-default',
+      'btn-secondary',
       'formio-button-remove-row',
     ],
     removeRowIcon: [
       '{{iconClass(\'remove-circle\')}}',
     ],
-    addColumn: [
-      'col-md-3',
+    addColumn: [],
+    visuallyHidden: [
+      'visually-hidden'
     ],
   },
   html: {

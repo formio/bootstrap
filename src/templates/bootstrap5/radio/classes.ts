@@ -7,12 +7,18 @@ export default {
     wrapper: [
       '{{input.attr.type}}',
       'form-check{{inline ? \'-inline\' : \'\'}}',
-      '{{component.optionsLabelPosition && component.optionsLabelPosition !== \'right\' ? \'ps-0\' : \'\'}}'
+    ],
+    wrapperLabelRight: [],
+    wrapperLabelNonRight: [
+      'ps-0',
     ],
     label: [
       'form-check-label',
       'label-position-{{component.optionsLabelPosition}}'
-    ]
+    ],
+    input: [
+      'form-check-input'
+    ],
   },
   html: {
     radio: []

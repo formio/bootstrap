@@ -1,5 +1,8 @@
 export default {
   form: {
+    input: [
+      'form-control'
+    ],
     inputGroup: [
       'input-group'
     ],

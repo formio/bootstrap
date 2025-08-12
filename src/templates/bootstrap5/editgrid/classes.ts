@@ -1,6 +1,6 @@
 export default {
   form: {
-    editgrid: [
+    editGrid: [
       'editgrid-listgroup',
       'list-group'
     ],
@@ -53,7 +53,7 @@ export default {
     ]
   },
   html: {
-    editgrid: [
+    editGrid: [
       'editgrid-listgroup',
       'list-group'
     ],
