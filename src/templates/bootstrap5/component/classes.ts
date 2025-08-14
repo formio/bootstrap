@@ -1,9 +1,11 @@
 export default {
-    form: {
-        component: [],
-        messageContainer: [  
-            "formio-errors",
-            "invalid-feedback"
-        ]
-    }
-}
+  form: {
+    component: [
+      '{{classes}}'
+    ],
+    messageContainer: [
+      'formio-errors',
+      'invalid-feedback'
+    ]
+  },
+};
