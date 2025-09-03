@@ -2,6 +2,9 @@
 
 This repository will change the rendering of forms in formio.js so that it uses html and classes compatible with [Bootstrap 3](https://getbootstrap.com/docs/3.4/) and [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) framework. 
 
+> [!IMPORTANT]
+> As of 2 September 2025, the main branch will be renamed main_old. The new main will be based on the 3.1.x branch, which is the latest stable release. See [here](https://github.com/formio/bootstrap/issues/140) for more details about this change.
+
 ### Using Bootstrap 3
 
 ```javascript
