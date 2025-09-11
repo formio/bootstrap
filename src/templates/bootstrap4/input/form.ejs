@@ -34,7 +34,12 @@
 <span aria-live="assertive" id="{{ctx.instance.id}}-liveRegion" class="sr-only" ref="liveRegion"></span>
 {% } %}
 {% if (ctx.suffix) { %}
-  <div class="input-group-append" ref="suffix">
+  <div class="input-group-append"
+    ref="suffix"
+    {% if (ctx.readOnly) { %}
+    role="presentation"
+    {% } %}
+    >
     <span class="input-group-text">
       {% if(ctx.suffix instanceof HTMLElement){ %}
         {{ ctx.t(ctx.suffix.outerHTML, { _userInput: true }) }}
