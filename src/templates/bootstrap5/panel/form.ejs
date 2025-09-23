@@ -4,7 +4,7 @@
     {% if (ctx.component.collapsible) { %}
     tabindex="0"
     {% } %}
-    role="button"
+    role="{{ctx.readOnly ? 'presentation' : 'button'}}"
     aria-expanded="{{ctx.component.collapsible ? !ctx.collapsed : true}}"
     aria-controls="{{ctx.instance.id}}-{{ctx.component.key}}"
     ref="header"
