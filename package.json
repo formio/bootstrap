@@ -13,14 +13,6 @@
       "import": "./lib/cjs/templates/components/index.js",
       "require": "./lib/cjs/templates/components/index.js"
     },
-    "./bootstrap3": {
-      "import": "./lib/cjs/bootstrap3.js",
-      "require": "./lib/cjs/bootstrap3.js"
-    },
-    "./bootstrap4": {
-      "import": "./lib/cjs/bootstrap4.js",
-      "require": "./lib/cjs/bootstrap4.js"
-    },
     "./bootstrap5": {
       "import": "./lib/cjs/bootstrap5.js",
       "require": "./lib/cjs/bootstrap5.js"
@@ -28,12 +20,6 @@
   },
   "typesVersions": {
     "*": {
-      "bootstrap3": [
-        "lib/mjs/bootstrap3.d.ts"
-      ],
-      "bootstrap4": [
-        "lib/mjs/bootstrap4.d.ts"
-      ],
       "bootstrap5": [
         "lib/mjs/bootstrap5.d.ts"
       ]
