@@ -45,7 +45,7 @@
     "watch": "tsc -w",
     "build": "rm -rf ./lib && tsc --project tsconfig.cjs.json && tsc --project tsconfig.mjs.json && gulp templates && webpack && node ./libpackage.js",
     "lint": "tslint -p .",
-    "prepare": "yarn build"
+    "prepare": "npm build"
   },
   "pre-commit": [
     "lint",
