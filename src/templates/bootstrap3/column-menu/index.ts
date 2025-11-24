@@ -1,2 +1,2 @@
-import html from './html.ejs.js';
+import html from './html.ejs';
 export default { html };
