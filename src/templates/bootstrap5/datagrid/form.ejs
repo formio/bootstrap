@@ -3,6 +3,21 @@
     {{ ctx.component.hover ? 'table-hover' : ''}}
     {{ ctx.component.condensed ? 'table-sm' : ''}}
     " {% if (ctx.component.layoutFixed || ctx.readOnly) { %}style="table-layout: fixed;"{% } %}>
+    <colgroup>
+      {% if (ctx.component.reorder) { %}
+      <col>
+      {% } %}
+    
+      {% ctx.columns.forEach(function(col) { %}
+      {% if (!col.hidden || ctx.builder) { %}
+      <col>
+      {% } %}
+      {% }) %}
+    
+      {% if (ctx.hasExtraColumn && !ctx.builder) { %}
+      <col class="extra-remove-col">
+      {% } %}
+    </colgroup>
   {% if (ctx.hasHeader) { %}
   <thead>
     <tr>
