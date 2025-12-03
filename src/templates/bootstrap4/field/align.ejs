@@ -18,9 +18,16 @@
 
   <div class="field-content" style="{{ctx.contentStyles}}">
     {{ctx.element}}
+    {% if (!ctx.isRightPosition && ctx.isRightAlign) { %}
+        {% if (ctx.component.description) { %}
+        <div class="form-text text-muted">{{ctx.t(ctx.component.description, { _userInput: true })}}</div>
+        {% } %}
+      <div ref="messageContainer" class="formio-errors invalid-feedback"></div>
+    {% } %}
   </div>
 </div>
-
-{% if (ctx.component.description) { %}
-  <div class="form-text text-muted">{{ctx.t(ctx.component.description, { _userInput: true })}}</div>
+{% if (ctx.isRightPosition || !ctx.isRightAlign) { %}
+    {% if (ctx.component.description) { %}
+      <div class="form-text text-muted">{{ctx.t(ctx.component.description, { _userInput: true })}}</div>
+    {% } %}
 {% } %}
