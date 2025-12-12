@@ -125,16 +125,35 @@
       </div>
     {% }) %}
     {% ctx.filesToUpload.forEach(function(file) { %}
-      {% if (file.status === 'progress') { %}
-        <div class="text-right">{{ctx.fileSize(file.size)}}</div>
-        <div class="status progress">
-          <div id={{file.id}} class="progress-bar" role="progressbar" aria-valuenow="{{file.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{file.progress}}%" ref="progress">
-            <span class="sr-only">{{file.progress}}% {{ctx.t('Complete')}}</span>
+      <li class="list-group-item">
+        <div class="row align-center">
+          <div class="col-md-{{ctx.columns.name}}">
+            <div>{{file.originalName || file.name}}</div>
+            {% if (file.status === 'progress') { %}
+              <div class="status progress">
+                <div id={{file.id}} class="progress-bar" role="progressbar" aria-valuenow="{{file.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{file.progress}}%" ref="progress">
+                  <span class="sr-only">{{file.progress}}% {{ctx.t('completeStatus')}}</span>
+                </div>
+              </div>
+            {% } else { %}
+              <div class="status text-{{file.status === 'error' ? 'danger': file.status}}">{{ctx.t(file.message)}}</div>
+            {% } %}
           </div>
+          <div class="col-md-{{ctx.columns.size}}">{{ctx.fileSize(file.size)}}</div>
+          {% if (ctx.self.hasTypes) { %}
+            <div class="col-md-{{ctx.columns.type}}">
+              <select class="file-type" ref="fileType">
+                {% ctx.component.fileTypes.map(function(type) { %}
+                  <option class="test" value="{{ type.value }}" {% if (type.label === file.fileType) { %}selected="selected"{% } %}>{{ctx.t(type.label)}}</option>
+                {% }); %}
+              </select>
+            </div>
+          {% } %}
+          {% if (!ctx.isSyncing && file.status !== 'success') { %}
+            <div class="col-md-{{ctx.columns.actions}} justify-center"><i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="fileToSyncRemove"></i></div>
+          {% } %}
         </div>
-      {% } else { %}
-        <div class="status text-{{file.status === 'error' ? 'danger': file.status}}">{{ctx.t(file.message)}}</div>
-      {% } %}
+      </li>
     {% }) %}
   </div>
 {% } %}
