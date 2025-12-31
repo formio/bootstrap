@@ -19,7 +19,7 @@
             <div class="col-md-1"><i class="{{ctx.iconClass('remove')}}" ref="removeLink"></i></div>
           {% } %}
           <div class="col-md-{% if (ctx.self.hasTypes) { %}7{% } else { %}9{% } %}">
-            {% if (ctx.component.uploadOnly) { %}
+            {% if (ctx.component.uploadOnly || ctx.options.pdf) { %}
               {{file.originalName || file.name}}
             {% } else { %}
               <a href="{{file.url || '#'}}" target="_blank" ref="fileLink">{{file.originalName || file.name}}</a>

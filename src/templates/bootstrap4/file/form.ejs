@@ -28,7 +28,7 @@
       <li class="list-group-item">
         <div class="row">
           <div class="col-md-{{ctx.columns.name}}">
-            {% if (ctx.component.uploadOnly) { %}
+            {% if (ctx.component.uploadOnly || ctx.options.pdf) { %}
               {{file.originalName || file.name}}
             {% } else { %}
               <a href="{{file.url || '#'}}" target="_blank" ref="fileLink">
