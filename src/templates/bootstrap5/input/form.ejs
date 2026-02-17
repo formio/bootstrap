@@ -57,6 +57,7 @@
 {% if (ctx.prefix || ctx.suffix || ctx.options.floatingLabels) { %}
   </div>
 {% } %}
+<span class="visually-hidden" ref="announceMessage" aria-live="polite"></span>
 {% if (ctx.component.showCharCount || ctx.component.showWordCount) { %}
 <div class="form-text {{ctx.component.description ? 'float-end' : 'text-end'}}">
   {% if (ctx.component.showCharCount) { %}
