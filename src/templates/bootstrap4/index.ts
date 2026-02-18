@@ -58,6 +58,7 @@ import wizard from './wizard';
 import wizardHeader from './wizardHeader';
 import wizardHeaderClassic from './wizardHeaderClassic';
 import wizardHeaderVertical from './wizardHeaderVertical';
+import wizardHeaderStepIndicator from './wizardHeaderStepIndicator';
 import wizardNav from './wizardNav';
 import cssClasses from './cssClasses';
 import errorsList from './errorsList';
@@ -141,6 +142,7 @@ export default {
   wizardHeader,
   wizardHeaderClassic,
   wizardHeaderVertical,
+  wizardHeaderStepIndicator,
   wizardNav,
   errorsList,
   alert,

@@ -1,0 +1,31 @@
+<div class="progress">
+  <div
+    class="progress-bar"
+    role="progressbar"
+    style="width: {{(ctx.currentPage+1)/ctx.panels.length*100}}%"
+    aria-valuenow="{{(ctx.currentPage+1)/ctx.panels.length*100}}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  ></div>
+</div>
+<nav aria-label="navigation" id="{{ ctx.wizardKey }}-header">
+ <ul class="pagination nav nav-pills">
+    {% ctx.panels.forEach(function(panel, index) { %}
+    <li class="page-item" role="navigation">
+      <button
+        tabindex="0"
+        data-index="{{index}}"
+        class="nav-link{{ctx.currentPage < index ? ' disabled' : ''}}{{ctx.currentPage === index ? ' active' : ''}}"
+        ref="{{ctx.wizardKey}}-link"
+        {{ctx.currentPage < index ? ' disabled' : ''}}
+        {{ctx.currentPage === index ? ' aria-selected="true"' : ''}}
+      >
+        {{ctx.t(panel.title, { _userInput: true })}}
+        {% if (panel.tooltip && ctx.currentPage === index) { %}
+        <i ref="{{ctx.wizardKey}}-tooltip" class="{{ctx.iconClass('question-sign')}} text-muted" data-tooltip="{{panel.tooltip}}"></i>
+        {% } %}
+      </button>
+    </li>
+    {% }) %}
+  </ul>
+</nav>
