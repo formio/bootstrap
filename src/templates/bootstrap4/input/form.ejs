@@ -19,7 +19,10 @@
         {{attr}}="{{ctx.input.attr[attr]}}"
       {% } %}
       id="{{ctx.instance.id}}-{{ctx.component.key}}"
-      aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}} {% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}}{% } %}"
+      aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}}"
+      {% if (ctx.component.description || ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { %}
+      aria-describedby="{% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}}{% } %}{% if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { %} h-{{ctx.instance.id}}-{{ctx.component.key}}{% } %}"
+      {% } %}
       aria-required="{{ctx.input.ref === 'input' || !ctx.input.ref ? ctx.component.validate.required :
         ctx.component.fields && ctx.component.fields[ctx.input.ref] && ctx.component.fields[ctx.input.ref].required || false}}"
     >{{ctx.input.content}}</{{ctx.input.type}}>
@@ -29,6 +32,9 @@
 {% } %}
 {% if (ctx.component.editor || ctx.component.wysiwyg) { %}
   <div ref="input"></div>
+{% } %}
+{% if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { %}
+<span id="h-{{ctx.instance.id}}-{{ctx.component.key}}" class="sr-only">{{ctx.t('numeric only')}}</span>
 {% } %}
 {% if (ctx.component.type === 'datetime') { %}
 <span aria-live="assertive" id="{{ctx.instance.id}}-liveRegion" class="sr-only" ref="liveRegion"></span>
