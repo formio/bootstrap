@@ -1,3 +1,4 @@
+{% var fieldsetLegendIds = ctx.instance.getFieldsetLegendIds ? ctx.instance.getFieldsetLegendIds() : ''; %}
 <select
   ref="{{ctx.input.ref ? ctx.input.ref : 'selectContainer'}}"
   {{ ctx.input.multiple ? 'multiple' : '' }}
@@ -7,6 +8,7 @@
   {% if (!ctx.input.attr.id) { %}
   id="{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}
+  aria-labelledby="{% if (fieldsetLegendIds) { %}{{fieldsetLegendIds}} {% } %}l-{{ctx.instance.id}}-{{ctx.component.key}}"
   {% if (ctx.component.description) { %}
   aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}
