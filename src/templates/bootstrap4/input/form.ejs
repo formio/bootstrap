@@ -63,10 +63,10 @@
 {% if (ctx.component.showCharCount || ctx.component.showWordCount) { %}
 <div class="form-text {{ctx.component.description ? 'pull-right' : 'text-right'}}">
   {% if (ctx.component.showCharCount) { %}
-  <span class="text-muted" ref="charcount" aria-live="polite"></span>
+  <span class="text-muted" ref="charcount" aria-hidden="true"></span>
   {% } %}
   {% if (ctx.component.showWordCount) { %}
-  <span class="text-muted" ref="wordcount" aria-live="polite"></span>
+  <span class="text-muted" ref="wordcount" aria-hidden="true"></span>
   {% } %}
 </div>
 {% } %}
