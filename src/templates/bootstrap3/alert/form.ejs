@@ -2,8 +2,4 @@
   {% for (var attr in ctx.attrs) { %}
     {{attr}}="{{ctx.attrs[attr]}}"
   {% } %}
-  {% if (ctx.type === 'success' && !ctx.attrs['aria-live']) { %}
-    aria-live="polite"
-    aria-atomic="true"
-  {% } %}
 >{{ctx.message}}</div>

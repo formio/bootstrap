@@ -3,32 +3,15 @@
     {{ ctx.component.hover ? 'table-hover' : ''}}
     {{ ctx.component.condensed ? 'table-sm' : ''}}
     " {% if (ctx.component.layoutFixed || ctx.readOnly) { %}style="table-layout: fixed;"{% } %}>
-    <colgroup>
-      {% if (ctx.component.reorder) { %}
-      <col>
-      {% } %}
-    
-      {% ctx.columns.forEach(function(col) { %}
-      {% if (!col.hidden || ctx.builder) { %}
-      <col>
-      {% } %}
-      {% }) %}
-    
-      {% if (ctx.hasExtraColumn && !ctx.builder) { %}
-      <col class="extra-remove-col">
-      {% } %}
-    </colgroup>
   {% if (ctx.hasHeader) { %}
   <thead>
     <tr>
       {% if (ctx.component.reorder) { %}<th></th>{% } %}
       {% ctx.columns.forEach(function(col) { %}
-        {% if (!col.hidden || ctx.builder) { %}
-          <th class="{{col.validate && col.validate.required ? 'field-required' : ''}}">
-            {{ col.hideLabel ? '' : ctx.t(col.label || col.title, { _userInput: true }) }}
-            {% if (col.tooltip) { %} <i ref="tooltip" tabindex="0" data-title="{{col.tooltip}}" class="{{ctx.iconClass('question-sign')}} text-muted" data-tooltip="{{col.tooltip}}"></i>{% } %}
-          </th>
-        {% } %}
+        <th class="{{col.validate && col.validate.required ? 'field-required' : ''}}">
+          {{ col.hideLabel ? '' : ctx.t(col.label || col.title, { _userInput: true }) }}
+          {% if (col.tooltip) { %} <i ref="tooltip" tabindex="0" data-title="{{col.tooltip}}" class="{{ctx.iconClass('question-sign')}} text-muted" data-tooltip="{{col.tooltip}}"></i>{% } %}
+        </th>
       {% }) %}
       {% if (ctx.hasExtraColumn) { %}
       <th>
@@ -93,4 +76,3 @@
   </tfoot>
   {% } %}
 </table>
-<span class="visually-hidden" ref="liveRegion" aria-live="polite"></span>
