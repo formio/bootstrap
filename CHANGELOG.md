@@ -1,269 +1,546 @@
-# Change Log
-All notable changes to this project will be documented in this file
+# @formio/bootstrap
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+## 4.0.0
+
+### Major Changes
+
+- ef3f4de: fix error message misalignment
+
+### Patch Changes
+
+- 350deb4: FIO-11049 fixed double navigation announce
+- 1472bcf: FIO-11511: fix duplicate Step Indicator progress bars
+- 78047ac: Added classes to the multiple images uploaded to the File component to add margins
+- 189ad3a: FIO-10890: fixed an issue where file uploads appear as clickable links in pdf submission viewer
+- 4932711: Fix column width misalignment for remove row button in dataGrid
+- 827e520: FIO-11126: fixed the Field Set Legend announcement by a screen reader for all Components within fieldset
+- 898e929: FIO-11049 added wizard Step Indicator header
+- 92a51c3: FIO-11049 fixed extra announce for navigation landmark buttons
+- ddc5753: FIO-10007: fixed display of file validation errors
+
+## 4.0.0-api98.5
+
+### Patch Changes
+
+- 1472bcf: FIO-11511: fix duplicate Step Indicator progress bars
+
+## 4.0.0-api98.4
+
+### Patch Changes
+
+- 92a51c3: FIO-11049 fixed extra announce for navigation landmark buttons
+
+## 4.0.0-api98.3
+
+### Patch Changes
+
+- 350deb4: FIO-11049 fixed double navigation announce
+
+## 4.0.0-api98.2
+
+### Patch Changes
+
+- 78047ac: Added classes to the multiple images uploaded to the File component to add margins
+- 827e520: FIO-11126: fixed the Field Set Legend announcement by a screen reader for all Components within fieldset
+
+## 4.0.0-api98.1
+
+### Patch Changes
+
+- 24e1e58: FIO-10893 Fixed duplicate announcements for form components
+- 7cbcd59: FIO-11126: fixed the Field Set Legend announcement by a screen reader for all Components within fieldset
+- 6ad1048: Added improvements for screen reader support.
+- c156c10: making characters limits available for screen readers
+- f7edde3: FIO-10942: enabled Screen Readers to Announce Submission Success Message
+- 898e929: FIO-11049 added wizard Step Indicator header
+
+## 4.0.0-api98.0
+
+### Major Changes
+
+- ef3f4de: fix error message misalignment
+
+### Patch Changes
+
+- 189ad3a: FIO-10890: fixed an issue where file uploads appear as clickable links in pdf submission viewer
+- 4932711: Fix column width misalignment for remove row button in dataGrid
+- ddc5753: FIO-10007: fixed display of file validation errors
+
+## 3.2.2
+
+### Patch Changes
+
+- 7c28a14: FIO-10942: enabled Screen Readers to Announce Submission Success Message
+
+## 3.2.2-api97.0
+
+### Patch Changes
+
+- 7c28a14: FIO-10942: enabled Screen Readers to Announce Submission Success Message
+
+## 3.2.1
+
+### Patch Changes
+
+- 38b7b20: FIO-10893 Fixed duplicate announcements for form components
+- a5bd18b: FIO-11126: fixed the Field Set Legend announcement by a screen reader for all Components within fieldset
+- 550e172: Added improvements for screen reader support.
+- cde1d5b: making characters limits available for screen readers
+
+## 3.2.1-api97.3
+
+### Patch Changes
+
+- 550e172: Added improvements for screen reader support.
+
+## 3.2.1-api97.2
+
+### Patch Changes
+
+- a5bd18b: FIO-11126: fixed the Field Set Legend announcement by a screen reader for all Components within fieldset
+
+## 3.2.1-api97.1
+
+### Patch Changes
+
+- 38b7b20: FIO-10893 Fixed duplicate announcements for form components
+
+## 3.2.1-api97.0
+
+### Patch Changes
+
+- cde1d5b: making characters limits available for screen readers
+
+## 3.2.0
+
+### Minor Changes
+
+- d34c952: Revert an effort to move to ESM-compatible syntax
+- f6c39e7: FIO-10549 fix hidden component label shown when Initialize Empty is checked
+
+### Patch Changes
+
+- 06eb194: FIO-10499 Fixed panel being incorrectly announced in readonly mode
+- cf7056e: Add asterisk screenreader required
+- 5c87b17: fix-panel-component-not-showing-label-in-data-grid-test
+
+## 3.2.0-rc.1
+
+### Patch Changes
+
+- cf7056e: Add asterisk screenreader required
+
+## 3.2.0-rc.0
+
+### Minor Changes
+
+- d34c952: Revert an effort to move to ESM-compatible syntax
+- f6c39e7: FIO-10549 fix hidden component label shown when Initialize Empty is checked
+
+### Patch Changes
+
+- 06eb194: FIO-10499 Fixed panel being incorrectly announced in readonly mode
+- 5c87b17: fix-panel-component-not-showing-label-in-data-grid-test
+
+## 3.1.4
+
+### Patch Changes
+
+- 8a72cc9: Add asterisk screenreader required
+
+## 3.1.4-api96.0
+
+### Patch Changes
+
+- 8a72cc9: Add asterisk screenreader required
+
+## 3.1.3
+
+### Patch Changes
+
+- 2a21895: FIO-10499 Fixed panel being incorrectly announced in readonly mode
+- c56b0ee: FIO-10500 Fixed DateTime suffixes announced as clickable in readonly mode
+
+## 3.1.3-rc.1
+
+### Patch Changes
+
+- 2a21895: FIO-10499 Fixed panel being incorrectly announced in readonly mode
+
+## 3.1.3-rc.0
+
+### Patch Changes
+
+- c56b0ee: FIO-10500 Fixed DateTime suffixes announced as clickable in readonly mode
 
 ## 3.1.2
+
 ### Changed
- - Official Release
+
+- Official Release
 
 ## 3.1.2-rc.3
+
 ### Changed
- - FIO-10462: updated circle-remove to circle-xmark for font-awesome icons
+
+- FIO-10462: updated circle-remove to circle-xmark for font-awesome icons
 
 ## 3.1.2-rc.2
+
 ### Changed
- - FIO-9245: Remove unneeded bootstrap class causing display issues in Safari for the data grid while editing the form in the portal
+
+- FIO-9245: Remove unneeded bootstrap class causing display issues in Safari for the data grid while editing the form in the portal
 
 ## 3.1.2-rc.1
+
 ### Changed
- - FIO-9245 DataGrid: Fix width and positioning for table buttons
- - FIO-10217 fixed the display of interpolated values in BuilderMode
+
+- FIO-9245 DataGrid: Fix width and positioning for table buttons
+- FIO-10217 fixed the display of interpolated values in BuilderMode
 
 ## 3.1.1
+
 ### Changed
- - Official Release
+
+- Official Release
 
 ## 3.1.1-rc.3
+
 ### Changed
- - FIO-10060: Fixes an issue where some bootstrap icons are not displayed
- -FIO-10065: changed name to biname when using bootstrap icons
+
+- FIO-10060: Fixes an issue where some bootstrap icons are not displayed
+  -FIO-10065: changed name to biname when using bootstrap icons
 
 ## 3.1.1-rc.2
+
 ### Changed
- - FIO-9377 added progressbar for for file upload with Display as image
+
+- FIO-9377 added progressbar for for file upload with Display as image
 
 ## 3.1.1-rc.1
+
 ### Changed
- - FIO-9761: fixed an issue where fontawesome icons do not appear
+
+- FIO-9761: fixed an issue where fontawesome icons do not appear
 
 ## 3.1.0
+
 ### Changed
- - Official Release
+
+- Official Release
 
 ## 3.1.0-rc.4
+
 ### Changed
- - Revert https://github.com/formio/bootstrap/pull/121 out of 3.1.x branch
+
+- Revert https://github.com/formio/bootstrap/pull/121 out of 3.1.x branch
 
 ## 3.1.0-rc.2
+
 ### Changed
- - FIO-9751 updated modal edit window for components with hidden tabs
+
+- FIO-9751 updated modal edit window for components with hidden tabs
 
 ## 3.1.0-rc.1
-### Changed
- - Adding component modal ref so components can redraw within a modal.
 
 ### Changed
- - Increment minor version
+
+- Adding component modal ref so components can redraw within a modal.
+
+### Changed
+
+- Increment minor version
 
 ## 3.0.0
+
 ### Changed
- - Official Release
+
+- Official Release
 
 ## 3.0.0-rc.41
+
 ### Changed
- - FIO-9239:  Added missing sketchpad icons mapping
+
+- FIO-9239: Added missing sketchpad icons mapping
 
 ## 3.0.0-rc.40
+
 ### Changed
- - FIO-9226 Fixed tooltips when fontawesome fallback is used
- - FIO-9227 Fixed fontawesome fallback for help link
+
+- FIO-9226 Fixed tooltips when fontawesome fallback is used
+- FIO-9227 Fixed fontawesome fallback for help link
 
 ## 3.0.0-rc.39
+
 ### Changed
- - FIO-9169 Changed fontawesome name of move icon
- - FIO-8808: Bootstrap 5 class scan
+
+- FIO-9169 Changed fontawesome name of move icon
+- FIO-8808: Bootstrap 5 class scan
 
 ## 3.0.0-rc.38
+
 ### Changed
- - FIO-8234/FIO-7195: Fixes an issue where value properties are shown instead of labels for Select component with Resource/URL data sources in DataTable
- - FIO-9169 Fixed missing icon in formbuilder
+
+- FIO-8234/FIO-7195: Fixes an issue where value properties are shown instead of labels for Select component with Resource/URL data sources in DataTable
+- FIO-9169 Fixed missing icon in formbuilder
 
 ## 3.0.0-rc.37
+
 ### Changed
- - FIO-8752: fix tabindex for keyboard actions
+
+- FIO-8752: fix tabindex for keyboard actions
 
 ## 3.0.0-rc.36
 
 ## 3.0.0-rc.26
+
 ### Fixed
- - FIO-5748: changed templates to support collapsible preview in component settings
- - FIO-7224: Changed alignment for PDF condensed mode
- - FIO-7209: Radio works without ValueProperty set
- - FIO-7197: Increased builder dropzone in DataGrid
- - FIO-7429: Fix columns component settings (pull, offset, push)
- - FIO-7365: fixed an issue with Textarea component expanding inside of the DataGrid in Submission view
- - FIO-5288-fix-of-search-bar
- - FIO-3820: added file synchronization feature
- - FIO-7773: Add floating labels to Bootstrap 5 template
- - Bump es5-ext from 0.10.62 to 0.10.64
- - Bump @babel/traverse from 7.22.5 to 7.23.2
- - Bootstrap5: Missing icons for panel collapse/uncollapse
- - Bump get-func-name from 2.0.0 to 2.0.2
- - FIO-7933 added PDF Document Designer
- - FIO-8199: Fixes an issue where Checkbox does not have id and for attributes
- - #93 - untranslatable builder sidebar search field
- - FIO-7507 & FIO-7848: publish-dev-tag-to-npm
- - FIO-8303: fixed data grid templates
- - FIO-8426: added eSignature icon classes
- - Adding the Grid templates to keep the build size low on the grid library
- - Fixes for 5.x renderer
+
+- FIO-5748: changed templates to support collapsible preview in component settings
+- FIO-7224: Changed alignment for PDF condensed mode
+- FIO-7209: Radio works without ValueProperty set
+- FIO-7197: Increased builder dropzone in DataGrid
+- FIO-7429: Fix columns component settings (pull, offset, push)
+- FIO-7365: fixed an issue with Textarea component expanding inside of the DataGrid in Submission view
+- FIO-5288-fix-of-search-bar
+- FIO-3820: added file synchronization feature
+- FIO-7773: Add floating labels to Bootstrap 5 template
+- Bump es5-ext from 0.10.62 to 0.10.64
+- Bump @babel/traverse from 7.22.5 to 7.23.2
+- Bootstrap5: Missing icons for panel collapse/uncollapse
+- Bump get-func-name from 2.0.0 to 2.0.2
+- FIO-7933 added PDF Document Designer
+- FIO-8199: Fixes an issue where Checkbox does not have id and for attributes
+- #93 - untranslatable builder sidebar search field
+- FIO-7507 & FIO-7848: publish-dev-tag-to-npm
+- FIO-8303: fixed data grid templates
+- FIO-8426: added eSignature icon classes
+- Adding the Grid templates to keep the build size low on the grid library
+- Fixes for 5.x renderer
 
 ### Changed
- - added support for file synchronization feature
+
+- added support for file synchronization feature
 
 ## 3.0.0-rc.4
+
 ### Fixed
- - Fixed mjs and cjs template definitions.
+
+- Fixed mjs and cjs template definitions.
 
 ## 3.0.0-rc.2
+
 ### Changed
- - Added Bootstrap 5 templates
+
+- Added Bootstrap 5 templates
 
 ## 3.0.0-rc.1
+
 ### Changed
- - Added Bootstrap 4 templates.
+
+- Added Bootstrap 4 templates.
 
 ## 2.13.0-rc.1
+
 ### Changed
- - Increment minor version.
+
+- Increment minor version.
 
 ### Fixed
- - FIO-4343: Fixes datagrid remove row column using much space
+
+- FIO-4343: Fixes datagrid remove row column using much space
 
 ## 2.12.2
+
 ### Changed
- - Official Release
+
+- Official Release
 
 ## 2.12.2-rc.1
+
 ### Fixed
- - FIO-3924: Fixes an issue where the DataGrid has an additional column wwhen "Equal columns width" is checked
+
+- FIO-3924: Fixes an issue where the DataGrid has an additional column wwhen "Equal columns width" is checked
 
 ## 2.12.1
+
 ### Changed
- - Official Release
+
+- Official Release
 
 ## 2.12.1-rc.1
+
 ### Fixed
- - FIO-4567: Update Signature component template to match bootstrap templates
+
+- FIO-4567: Update Signature component template to match bootstrap templates
 
 ## 2.12.0
+
 ### Changed
- - Official Release
+
+- Official Release
 
 ## 2.12.0-rc.7
+
 ### Fixed
- - FIO-3966 Fixed an issue where default value of textarea component is not empty upon creation
- - FIO-3758: Duplication of radio ids inside nested forms
+
+- FIO-3966 Fixed an issue where default value of textarea component is not empty upon creation
+- FIO-3758: Duplication of radio ids inside nested forms
 
 ## 2.12.0-rc.6
+
 ### Fixed
- - FIO-3758: Duplication of radio ids inside nested forms
+
+- FIO-3758: Duplication of radio ids inside nested forms
 
 ## 2.12.0-rc.5
+
 ### Fixed
- - FIO-3909 & FIO-3910: Fix FormBuilder polyfill import
+
+- FIO-3909 & FIO-3910: Fix FormBuilder polyfill import
 
 ## 2.12.0-rc.4
+
 ### Fixed
- - FIO-3519 Added ref to wizard header for 'scroll to top' feature
+
+- FIO-3519 Added ref to wizard header for 'scroll to top' feature
 
 ### Changed
- - Upgraded dependencies.
+
+- Upgraded dependencies.
 
 ## 2.12.0-rc.2
+
 ### Fixed
- - FIO-3323: Fixing the datagrid spacing.
+
+- FIO-3323: Fixing the datagrid spacing.
 
 ## 2.12.0-rc.1
+
 ### Changed
- - FIO-1239: Implement wizard header type selection
- - FIO-290 | FJS-1367: Feat: add an ability to specify Survey questions' and values' tooltips
- - FIO-1112: Add vertical layout classes for tabs component
- - FIO-175: Adds ability to use different masks for Value and for View
+
+- FIO-1239: Implement wizard header type selection
+- FIO-290 | FJS-1367: Feat: add an ability to specify Survey questions' and values' tooltips
+- FIO-1112: Add vertical layout classes for tabs component
+- FIO-175: Adds ability to use different masks for Value and for View
 
 ## 2.11.2
+
 ### Fixed
- - FIO-3323: Removing the "col" classes from tables since they are causing issues.
+
+- FIO-3323: Removing the "col" classes from tables since they are causing issues.
 
 ## 2.11.1
+
 ### Fixed
- - FIO-3323: Fixing the datagrid spacing.
+
+- FIO-3323: Fixing the datagrid spacing.
 
 ## 2.11.0
+
 ### Fixed
- - FIO-1383: Fixes an error occurring in IE11 when switch Wizard page in Form Builder
- - FIO-2565: Fixes an issue where tooltip for the first Wizard page is not shown on initial load
+
+- FIO-1383: Fixes an error occurring in IE11 when switch Wizard page in Form Builder
+- FIO-2565: Fixes an issue where tooltip for the first Wizard page is not shown on initial load
 
 ## 2.10.0
+
 ### Fixed
- - FIO-2463: fixed an issue where dataGrid renders incorrectly when reorder is enabled
+
+- FIO-2463: fixed an issue where dataGrid renders incorrectly when reorder is enabled
 
 ## 2.9.0
+
 ### Fixed
- - FIO-1336: File component not showing Take picture or Switch to file upload buttons
- - Fixed tooltips from not appearing in certain places.
- - FIO-1125: Any value used in Translate list is returning contains an invalid selection
- - FJS-1328: Fixes an issue where it is impossible to reorder rows of a child DataGrid
+
+- FIO-1336: File component not showing Take picture or Switch to file upload buttons
+- Fixed tooltips from not appearing in certain places.
+- FIO-1125: Any value used in Translate list is returning contains an invalid selection
+- FJS-1328: Fixes an issue where it is impossible to reorder rows of a child DataGrid
 
 ## 2.8.0
+
 ?????
 
 ## 2.7.0
+
 ### Fixed
- - UIP-251: Update file template with file drop area hide option
+
+- UIP-251: Update file template with file drop area hide option
 
 ### Added
- - FMG-99: Add col-md classes to table and dataGrid templates
- - FJS-1342: added templates for form errors list and alerts
- - FJS-1419: added tooltip for wizard pages
+
+- FMG-99: Add col-md classes to table and dataGrid templates
+- FJS-1342: added templates for form errors list and alerts
+- FJS-1419: added tooltip for wizard pages
 
 ### Changed
- - Upgrade @types/chai@4.2.14, @types/ejs@3.0.5, @types/sinon@9.0.10, sinon@9.2.3, @types/mocha@8.2.0, @types/node@14.14.20, mocha@8.2.1, ts-node@9.1.1, typescript@4.1.3, webpack@5.12.0, webpack-cli@4.3.1
+
+- Upgrade @types/chai@4.2.14, @types/ejs@3.0.5, @types/sinon@9.0.10, sinon@9.2.3, @types/mocha@8.2.0, @types/node@14.14.20, mocha@8.2.1, ts-node@9.1.1, typescript@4.1.3, webpack@5.12.0, webpack-cli@4.3.1
 
 ## 2.6.8
+
 ### Fixed
- - builderSidebar (template): fix panels not collapsed when switching between groups
+
+- builderSidebar (template): fix panels not collapsed when switching between groups
 
 ## 2.6.5
+
 ### Changed
- - Upgrade dependencies.
+
+- Upgrade dependencies.
 
 ## 2.6.4
+
 ### Changed
- - FJS-1050: added hide label option for panel
- - Changed prefix and suffix references.
+
+- FJS-1050: added hide label option for panel
+- Changed prefix and suffix references.
 
 ## 2.6.3
+
 ### Fixed
- - Adding for attributes for labels.
+
+- Adding for attributes for labels.
 
 ## 2.6.1
+
 ### Fixed
- - FJS-939: adopt input template to latest changes in bootstrap template
+
+- FJS-939: adopt input template to latest changes in bootstrap template
 
 ## 2.6.0
+
 ### Fixed
- - Add ref to tabs to fix flattened view.
+
+- Add ref to tabs to fix flattened view.
 
 ## 2.5.0
+
 ### ???
 
 ## 2.4.0
+
 ### Fixed
- - The percentage on the file uploads.
+
+- The percentage on the file uploads.
 
 ### Added
- - Column size configurations.
+
+- Column size configurations.
 
 ## 2.1.0
+
 ### Changed
- - Add label alignment support for pdf renderer
+
+- Add label alignment support for pdf renderer
 
 ## 2.0.0
+
 ### Breaking Change
- - Removed usage of `render` template function. Please ensure you are using at least formio.js@4.8.0.
+
+- Removed usage of `render` template function. Please ensure you are using at least formio.js@4.8.0.
 
 ### Changed
- - Upgrade typescript@3.7.5, webpack@4.41.5, ts-node@8.6.2, @types/node@13.1.8, mocha@7.0.0, nyc@15.0.0, sinon@8.1.1, tslint@6.0.0
+
+- Upgrade typescript@3.7.5, webpack@4.41.5, ts-node@8.6.2, @types/node@13.1.8, mocha@7.0.0, nyc@15.0.0, sinon@8.1.1, tslint@6.0.0

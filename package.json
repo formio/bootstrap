@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap",
-  "version": "3.1.2",
+  "version": "4.0.0",
   "description": "Bootstrap templates for Form.io forms",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
@@ -40,12 +40,9 @@
     }
   },
   "scripts": {
-    "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
-    "test": "mocha --require ts-node/register --reporter spec './{,!(node_modules)/**/}*.spec.ts'",
     "watch": "tsc -w",
     "build": "rm -rf ./lib && tsc --project tsconfig.cjs.json && tsc --project tsconfig.mjs.json && gulp templates && webpack && node ./libpackage.js",
-    "lint": "tslint -p .",
-    "prepare": "npm run build"
+    "lint": "tslint -p ."
   },
   "pre-commit": [
     "lint",
@@ -96,6 +93,5 @@
   "bugs": {
     "url": "https://github.com/formio/bootstrap3/issues"
   },
-  "homepage": "https://github.com/formio/bootstrap3#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/formio/bootstrap3#readme"
 }
