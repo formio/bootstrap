@@ -1,6 +1,6 @@
 {
   "name": "@formio/bootstrap",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Bootstrap templates for Form.io forms",
   "main": "lib/cjs/bootstrap5.js",
   "module": "lib/mjs/bootstrap5.js",
@@ -42,7 +42,9 @@
   "scripts": {
     "watch": "tsc -w",
     "build": "rm -rf ./lib && tsc --project tsconfig.cjs.json && tsc --project tsconfig.mjs.json && gulp templates && webpack && node ./libpackage.js",
-    "lint": "tslint -p ."
+    "lint": "tslint -p .",
+    "check-types": "tsc --noEmit",
+    "lint:fix": "tslint -p . --fix"
   },
   "pre-commit": [
     "lint",

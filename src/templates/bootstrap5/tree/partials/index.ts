@@ -6,6 +6,6 @@ export default {
     form: view,
   },
   treeEdit: {
-    form: edit
-  }
+    form: edit,
+  },
 };

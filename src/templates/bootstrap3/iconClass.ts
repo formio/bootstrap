@@ -32,5 +32,7 @@ export default (iconset, name, spinning) => {
     }
   }
 
-  return spinning ? `${iconset} ${iconset}-${name} ${iconset}-spin` : `${iconset} ${iconset}-${name}`;
+  return spinning
+    ? `${iconset} ${iconset}-${name} ${iconset}-spin`
+    : `${iconset} ${iconset}-${name}`;
 };

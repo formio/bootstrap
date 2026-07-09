@@ -147,5 +147,5 @@ export default {
   wizardHeaderStepIndicator,
   wizardNav,
   errorsList,
-  alert
+  alert,
 };

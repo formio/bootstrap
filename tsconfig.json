@@ -8,15 +8,6 @@
     "skipLibCheck": true,
     "rootDir": "src"
   },
-  "include": [
-    "src/*.ts",
-    "src/*.ejs",
-    "src/**/*.ts",
-    "src/**/*.ejs"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts",
-    "gulpfile.js",
-  ]
+  "include": ["src/*.ts", "src/*.ejs", "src/**/*.ts", "src/**/*.ejs"],
+  "exclude": ["node_modules", "**/*.spec.ts", "gulpfile.js"]
 }
