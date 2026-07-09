@@ -1,5 +1,21 @@
 # @formio/bootstrap
 
+## 4.0.2
+
+### Patch Changes
+
+- 799bfe5: preserve apostrophes in html5 option values
+- c40ad3e: FIO-7954: refactored and fixed translations
+- 6063d69: Prevent announcing clickable input labels when in read-only mode
+
+## 4.0.2-api99.0
+
+### Patch Changes
+
+- 799bfe5: preserve apostrophes in html5 option values
+- c40ad3e: FIO-7954: refactored and fixed translations
+- 6063d69: Prevent announcing clickable input labels when in read-only mode
+
 ## 4.0.1
 
 ### Patch Changes

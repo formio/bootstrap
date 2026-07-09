@@ -1,5 +1,5 @@
 <div class="builder-sidebar{{ctx.scrollEnabled ? ' builder-sidebar_scroll' : ''}}" ref="sidebar">
-  <input class="form-control builder-sidebar_search" type="search" ref="sidebar-search" placeholder="{{ctx.t('Search field(s)')}}" />
+  <input class="form-control builder-sidebar_search" type="search" ref="sidebar-search" placeholder="{{ctx.t('searchFields')}}" />
   <div id="{{ctx.groupId}}" class="panel-group" ref="sidebar-groups">
     {% ctx.groups.forEach(function(group) { %}
       {{ group }}
