@@ -1,5 +1,48 @@
 # @formio/bootstrap
 
+## 4.0.3
+
+### Patch Changes
+
+- 4864d4c: FIO-12002 Aligned bootstrap5 with VPAT so they can work correctly together
+- be69fe1: Adding information to the error link about which wizard page the error occurred on
+- af465a1: FIO-11335 Put numeric only announcement back in the label
+- a334b0f: FIO-11779 Fix Day component error message announcements in VPAT
+- 8d7803a: FIO-11976 Removed button from rendering a hidden label
+- 7c5dd71: FIO-12013 Fixed excessive label announcements in NVDA
+- 7b4b9f6: FIO-11446 Double announcements fix for Radio and Selectboxes
+- c657268: FIO-11317: Enabled the label for Data Grids and Edit Grids to be read properly by screenreaders
+- 2fae4ad: FIO-11976 Added sr-only label to bootstrap templates if the hideLabel is true
+
+## 4.0.3-api98.3
+
+### Patch Changes
+
+- 7c5dd71: FIO-12013 Fixed excessive label announcements in NVDA
+
+## 4.0.3-api98.2
+
+### Patch Changes
+
+- 4864d4c: FIO-12002 Aligned bootstrap5 with VPAT so they can work correctly together
+- 8d7803a: FIO-11976 Removed button from rendering a hidden label
+- 2fae4ad: FIO-11976 Added sr-only label to bootstrap templates if the hideLabel is true
+
+## 4.0.3-api98.1
+
+### Patch Changes
+
+- be69fe1: Adding information to the error link about which wizard page the error occurred on
+
+## 4.0.3-api98.0
+
+### Patch Changes
+
+- af465a1: FIO-11335 Put numeric only announcement back in the label
+- a334b0f: FIO-11779 Fix Day component error message announcements in VPAT
+- 7b4b9f6: FIO-11446 Double announcements fix for Radio and Selectboxes
+- c657268: FIO-11317: Enabled the label for Data Grids and Edit Grids to be read properly by screenreaders
+
 ## 4.0.2
 
 ### Patch Changes
