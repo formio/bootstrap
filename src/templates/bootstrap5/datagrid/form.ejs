@@ -3,6 +3,7 @@
     {{ ctx.component.hover ? 'table-hover' : ''}}
     {{ ctx.component.condensed ? 'table-sm' : ''}}
     " {% if (ctx.component.layoutFixed || ctx.readOnly) { %}style="table-layout: fixed;"{% } %}>
+  <caption class="visually-hidden">{{ctx.t(ctx.component.label)}}</caption>
     <colgroup>
       {% if (ctx.component.reorder) { %}
       <col>

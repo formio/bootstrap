@@ -1,5 +1,5 @@
 {% var fieldsetLegendIds = ctx.instance.getFieldsetLegendIds ? ctx.instance.getFieldsetLegendIds() : ''; %}
-<div class="row" role="group"
+<div class="row" role="group" ref="dayContainer"
   {% if (ctx.label.hidden) { %}
   aria-label="{{ctx.component.label}}"
   {% } else { %}

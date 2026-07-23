@@ -6,6 +6,7 @@
       {{ ctx.component.hover ? 'table-hover' : ''}}
       {{ ctx.component.condensed ? 'table-sm' : ''}}
     ">
+      <caption class="visually-hidden">{{ctx.t(ctx.component.label)}}</caption>
       {% if (ctx.header) { %}
       <thead class="editgrid-table-head">
         {{ctx.header}}

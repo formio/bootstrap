@@ -1,8 +1,11 @@
 <label
   ref="label"
-  class="col-form-label {{ctx.label.className}}"
-  {% if (!ctx.readOnly && ctx.component.type !== 'radio') { %}
+  class="col-form-label {{ctx.label.className}} {{ctx.label.hidden ? 'sr-only' : ''}}"
+  {% if (!ctx.readOnly && ctx.component.type !== 'radio' && ctx.component.type !== 'selectboxes') { %}
   for="{{ctx.instance.id}}-{{ctx.component.key}}"
+  {% } %}
+  {% if (ctx.component.type === 'radio' || ctx.component.type === 'selectboxes' || ctx.label.hidden) { %}
+  aria-hidden="true"
   {% } %}
   id="l-{{ctx.instance.id}}-{{ctx.component.key}}"
 >
@@ -10,7 +13,10 @@
   {% if (ctx.component.validate && ctx.component.validate.required) { %}
     <span class="required-star" aria-hidden="true">*</span>
   {% } %}
-  {% if (ctx.component.tooltip) { %}
+  {% if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { %}
+    <span class="sr-only">, {{ctx.t('numeric only')}},</span>
+  {% } %}
+  {% if (ctx.component.tooltip && !ctx.label.hidden) { %}
     <i ref="tooltip" tabindex="0" class="{{ctx.iconClass('question-sign')}} text-muted" data-tooltip="{{ctx.component.tooltip}}"></i>
   {% } %}
 </label>

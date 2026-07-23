@@ -3,6 +3,7 @@
     {{ component.hover ? 'table-hover' : ''}}
     {{ component.condensed ? 'table-condensed' : ''}}
     ">
+  <caption class="sr-only">{{t(component.label)}}</caption>
   {% if (hasHeader) { %}
   <thead>
     <tr>

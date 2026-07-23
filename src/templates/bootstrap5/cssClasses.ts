@@ -1,5 +1,6 @@
 export default {
   'border-default': '',
+  'sr-only': 'visually-hidden',
   'formio-tab-panel-active': 'active',
   'formio-tab-link-active': 'active',
   'formio-tab-link-container-active': 'active',
