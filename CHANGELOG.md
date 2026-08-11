@@ -1,5 +1,19 @@
 # @formio/bootstrap
 
+## 4.0.4
+
+### Patch Changes
+
+- 9813447: adding hyperlink to file comp description error
+- 793d0d8: FIO-11291: fixed Field Set Legend announcement by a screen reader for all Components within the field set on the View Submission page and PDF download
+
+## 4.0.4-api99.0
+
+### Patch Changes
+
+- 9813447: adding hyperlink to file comp description error
+- 793d0d8: FIO-11291: fixed Field Set Legend announcement by a screen reader for all Components within the field set on the View Submission page and PDF download
+
 ## 4.0.3
 
 ### Patch Changes
