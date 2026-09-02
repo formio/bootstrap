@@ -1,9 +1,14 @@
 {% var fieldsetLegendIds = ctx.instance.getFieldsetLegendIds ? ctx.instance.getFieldsetLegendIds() : ''; %}
+{% var isViewReadContext = ctx.instance.options && (ctx.instance.options.readOnly || ctx.instance.options.pdf); %}
+{% var viewAccessibleLabel = isViewReadContext && ctx.instance.getFormattedViewAccessibleLabel ? ctx.instance.getFormattedViewAccessibleLabel() : ''; %}
+{% var useAriaLabelOnly = isViewReadContext && viewAccessibleLabel; %}
+{% var ariaAttr = useAriaLabelOnly ? 'aria-label' : 'aria-labelledby'; %}
+{% var ariaValue = useAriaLabelOnly ? viewAccessibleLabel : ((fieldsetLegendIds ? fieldsetLegendIds + ' ' : '') + 'l-' + ctx.instance.id + '-' + ctx.component.key); %}
 <div class="row" role="group" ref="dayContainer"
   {% if (ctx.label.hidden) { %}
   aria-label="{{ctx.component.label}}"
   {% } else { %}
-  aria-labelledby="{% if (fieldsetLegendIds) { %}{{fieldsetLegendIds}} {% } %}l-{{ctx.instance.id}}-{{ctx.component.key}}"
+  {{ariaAttr}}="{{ariaValue}}"
   {% } %}
   {% if (ctx.component.description) { %}
   aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
@@ -12,7 +17,7 @@
   {% if (ctx.dayFirst && ctx.showDay) { %}
   <div class="col col-xs-3">
     {% if (!ctx.component.hideInputLabels) { %}
-    <label for="{{ctx.component.key}}-day" class="{% if(ctx.component.fields.day.required) { %}field-required{% } %}">{{ctx.t('day')}}</label>
+    <label for="{{ctx.component.key}}-day">{{ctx.t('day')}}{% if (ctx.component.fields.day.required) { %}<span class="required-star" aria-hidden="true"> *</span>{% } %}</label>
     {% } %}
     <div>{{ctx.day}}</div>
   </div>
@@ -20,7 +25,7 @@
   {% if (ctx.showMonth) { %}
   <div class="col col-xs-4">
     {% if (!ctx.component.hideInputLabels) { %}
-    <label for="{{ctx.component.key}}-month" class="{% if(ctx.component.fields.month.required) { %}field-required{% } %}">{{ctx.t('month')}}</label>
+    <label for="{{ctx.component.key}}-month">{{ctx.t('month')}}{% if (ctx.component.fields.month.required) { %}<span class="required-star" aria-hidden="true"> *</span>{% } %}</label>
     {% } %}
     <div>{{ctx.month}}</div>
   </div>
@@ -28,7 +33,7 @@
   {% if (!ctx.dayFirst && ctx.showDay) { %}
   <div class="col col-xs-3">
     {% if (!ctx.component.hideInputLabels) { %}
-    <label for="{{ctx.component.key}}-day" class="{% if(ctx.component.fields.day.required) { %}field-required{% } %}">{{ctx.t('day')}}</label>
+    <label for="{{ctx.component.key}}-day">{{ctx.t('day')}}{% if (ctx.component.fields.day.required) { %}<span class="required-star" aria-hidden="true"> *</span>{% } %}</label>
     {% } %}
     <div>{{ctx.day}}</div>
   </div>
@@ -36,7 +41,7 @@
   {% if (ctx.showYear) { %}
   <div class="col col-xs-5">
     {% if (!ctx.component.hideInputLabels) { %}
-    <label for="{{ctx.component.key}}-year" class="{% if(ctx.component.fields.year.required) { %}field-required{% } %}">{{ctx.t('year')}}</label>
+    <label for="{{ctx.component.key}}-year">{{ctx.t('year')}}{% if (ctx.component.fields.year.required) { %}<span class="required-star" aria-hidden="true"> *</span>{% } %}</label>
     {% } %}
     <div>{{ctx.year}}</div>
   </div>

@@ -22,6 +22,9 @@
       {% } else { %}
       <button class="btn btn-primary btn-wizard-nav-submit" ref="{{ctx.wizardKey}}-submit" aria-label="{{ctx.t('submitButtonAriaLabel')}}">{{ctx.t('submit')}}</button>
       {% } %}
+      <div ref="{{ctx.wizardKey}}-buttonMessageContainer">
+        <span class="help-block" ref="{{ctx.wizardKey}}-buttonMessage"></span>
+      </div>
     </li>
     {% } %}
   {% }) %}

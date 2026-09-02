@@ -17,6 +17,9 @@
   {% if (ctx.buttons.submit) { %}
   <li class="list-inline-item">
     <button class="btn btn-primary btn-wizard-nav-submit" ref="{{ctx.wizardKey}}-submit">{{ctx.t('submit')}}</button>
+    <div ref="{{ctx.wizardKey}}-buttonMessageContainer">
+      <span class="help-block" ref="{{ctx.wizardKey}}-buttonMessage"></span>
+    </div>
   </li>
   {% } %}
 </ul>
