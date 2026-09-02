@@ -50,7 +50,7 @@
             <div class="col-md-{{ctx.columns.type}}">{{file.fileType}}</div>
           {% } %}
           {% if (!ctx.disabled) { %}
-            <div class="col-md-{{ctx.columns.actions}} justify-center"><i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink"></i></div>
+            <div class="col-md-{{ctx.columns.actions}} justify-center"><i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink" aria-label="{{ctx.t('removeBtnPressToRemove')}} {{file.originalName || file.name}} {{ctx.t('file')}}"></i></div>
           {% } %}
         </div>
       </li>
@@ -119,7 +119,7 @@
         <div class="row align-center">
           <img ref="fileImage" src="" alt="{{file.originalName || file.name}}" style="width:{{ctx.component.imageSize}}px">
           {% if (!ctx.disabled) { %}
-            <i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink"></i>
+            <i tabindex="0" class="{{ctx.iconClass('remove')}}" ref="removeLink" aria-label="{{ctx.t('removeBtnPressToRemove')}} {{file.originalName || file.name}} {{ctx.t('file')}}"></i>
           {% } %}
         </div>
       </li>
@@ -188,7 +188,7 @@
         {% } %}
         <span class="visually-hidden">
           {{ctx.t('browseToAttachFileFor') + ' ' + ctx.t(ctx.component.label, { _userInput: true }) + '. ' +
-          (ctx.component.description ? ctx.t(ctx.component.description, { _userInput: true }) + '. ' : '') +
+          (ctx.component.description ? ctx.t(ctx.utils.removeHTML(ctx.component.description), { _userInput: true }) + '. ' : '') +
           ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? ctx.t('anyFileTypesAllowed') : ctx.t('allowedFileTypes') + ': ' + ctx.component.filePattern)}}
         </span>
       </a>

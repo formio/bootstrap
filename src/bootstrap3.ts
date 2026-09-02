@@ -6,5 +6,5 @@ export default {
   templates: {
     bootstrap3,
   },
-  translations
+  translations,
 };

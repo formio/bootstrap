@@ -1,5 +1,44 @@
 # @formio/bootstrap
 
+## 4.0.5
+
+### Patch Changes
+
+- bae15e2: FIO-12196: render the checkbox description for VPAT
+- cc30e15: change asterisks behavior
+- 08d2c57: FIO-11336 Removed double announcements for component description
+- baf4e14: FIO-11800 Added instruction to the remove buttons in File component
+- 14b3fd4: FIO-11979: show the Submission Complete message under the Wizard submit
+
+## 4.0.5-api99.1
+
+### Patch Changes
+
+- bae15e2: FIO-12196: render the checkbox description for VPAT
+
+## 4.0.5-api99.0
+
+### Patch Changes
+
+- cc30e15: change asterisks behavior
+- 08d2c57: FIO-11336 Removed double announcements for component description
+- baf4e14: FIO-11800 Added instruction to the remove buttons in File component
+- 14b3fd4: FIO-11979: show the Submission Complete message under the Wizard submit
+
+## 4.0.4
+
+### Patch Changes
+
+- 9813447: adding hyperlink to file comp description error
+- 793d0d8: FIO-11291: fixed Field Set Legend announcement by a screen reader for all Components within the field set on the View Submission page and PDF download
+
+## 4.0.4-api99.0
+
+### Patch Changes
+
+- 9813447: adding hyperlink to file comp description error
+- 793d0d8: FIO-11291: fixed Field Set Legend announcement by a screen reader for all Components within the field set on the View Submission page and PDF download
+
 ## 4.0.3
 
 ### Patch Changes
