@@ -15,7 +15,7 @@
   {% } %}
   >
   {% if (ctx.dayFirst && ctx.showDay) { %}
-  <div class="col col-xs-3">
+  <div class="col-3">
     {% if (!ctx.component.hideInputLabels) { %}
     <label for="{{ctx.component.key}}-day">{{ctx.t('day')}}{% if (ctx.component.fields.day.required) { %}<span class="required-star" aria-hidden="true"> *</span>{% } %}</label>
     {% } %}
@@ -23,7 +23,7 @@
   </div>
   {% } %}
   {% if (ctx.showMonth) { %}
-  <div class="col col-xs-4">
+  <div class="col-4">
     {% if (!ctx.component.hideInputLabels) { %}
     <label for="{{ctx.component.key}}-month">{{ctx.t('month')}}{% if (ctx.component.fields.month.required) { %}<span class="required-star" aria-hidden="true"> *</span>{% } %}</label>
     {% } %}
@@ -31,7 +31,7 @@
   </div>
   {% } %}
   {% if (!ctx.dayFirst && ctx.showDay) { %}
-  <div class="col col-xs-3">
+  <div class="col-3">
     {% if (!ctx.component.hideInputLabels) { %}
     <label for="{{ctx.component.key}}-day">{{ctx.t('day')}}{% if (ctx.component.fields.day.required) { %}<span class="required-star" aria-hidden="true"> *</span>{% } %}</label>
     {% } %}
@@ -39,7 +39,7 @@
   </div>
   {% } %}
   {% if (ctx.showYear) { %}
-  <div class="col col-xs-5">
+  <div class="col-5">
     {% if (!ctx.component.hideInputLabels) { %}
     <label for="{{ctx.component.key}}-year">{{ctx.t('year')}}{% if (ctx.component.fields.year.required) { %}<span class="required-star" aria-hidden="true"> *</span>{% } %}</label>
     {% } %}
